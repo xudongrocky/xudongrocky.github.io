@@ -1,0 +1,494 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>强大的zsh配置文件 | Rocky&#39;blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Rockyx">
+    
+
+    
+    <meta name="description" content="zsh比bash好用且强大多了！自动补全功能，自定义功能,自动纠错能力，命令颜色高亮等等。刚接触不久，分享安装经验，以及收藏的一些配置。
+1.我是用wget安装，一句话搞定。全程自动。安装成功如下图。
+执行代码：
+1wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
+如果没有安装w">
+<meta property="og:type" content="article">
+<meta property="og:title" content="强大的zsh配置文件">
+<meta property="og:url" content="http://xudongrocky.github.io/2015/07/31/打造漂亮实用的MAC OS 终端md/index.html">
+<meta property="og:site_name" content="Rocky'blog">
+<meta property="og:description" content="zsh比bash好用且强大多了！自动补全功能，自定义功能,自动纠错能力，命令颜色高亮等等。刚接触不久，分享安装经验，以及收藏的一些配置。
+1.我是用wget安装，一句话搞定。全程自动。安装成功如下图。
+执行代码：
+1wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
+如果没有安装w">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/81f0a834gw1eum0i9mlczj20g90a6goe.jpg">
+<meta property="og:updated_time" content="2015-07-31T08:13:48.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="强大的zsh配置文件">
+<meta name="twitter:description" content="zsh比bash好用且强大多了！自动补全功能，自定义功能,自动纠错能力，命令颜色高亮等等。刚接触不久，分享安装经验，以及收藏的一些配置。
+1.我是用wget安装，一句话搞定。全程自动。安装成功如下图。
+执行代码：
+1wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
+如果没有安装w">
+<meta name="twitter:creator" content="@1">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Rocky&#39;blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Rocky&#39;blog">Rocky&#39;blog</a></h1>
+				<h2 class="blog-motto">救赎，对未来。</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首页|Home</a></li>
+					
+						<li><a href="/archives">归档|Archives</a></li>
+					
+						<li><a href="/about">关于作者|About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:xudongrocky.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/07/31/打造漂亮实用的MAC OS 终端md/" title="强大的zsh配置文件" itemprop="url">强大的zsh配置文件</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Rockyx" target="_blank" itemprop="author">Rockyx</a>
+		
+  <p class="article-time">
+    <time datetime="2015-07-30T16:00:00.000Z" itemprop="datePublished"> 发表于 Jul 31 2015</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			
+		
+		</div>
+		
+		<p>zsh比bash好用且强大多了！自动补全功能，自定义功能,自动纠错能力，命令颜色高亮等等。刚接触不久，分享安装经验，以及收藏的一些配置。</p>
+<p>1.我是用wget安装，一句话搞定。全程自动。安装成功如下图。</p>
+<p>执行代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh</span><br></pre></td></tr></table></figure>
+<p>如果没有安装wget，请移步至 <a href="http://xudongrocky.github.io/2014/12/06/Homebrew/">Homebrew安装以及简单使用</a></p>
+<p>2.安装成功后效果如下：<br><img src="http://ww3.sinaimg.cn/large/81f0a834gw1eum0i9mlczj20g90a6goe.jpg" alt=""></p>
+<p>3.详细的zsh配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#color&#123;&#123;&#123;&#10;autoload colors&#10;colors&#10; &#10;for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do&#10;eval _$color=&#39;%&#123;$terminfo[bold]$fg[$&#123;(L)color&#125;]%&#125;&#39;&#10;eval $color=&#39;%&#123;$fg[$&#123;(L)color&#125;]%&#125;&#39;&#10;(( count = $count + 1 ))&#10;done&#10;FINISH=&#34;%&#123;$terminfo[sgr0]%&#125;&#34;&#10;#&#125;&#125;&#125;&#10; &#10;#&#21629;&#20196;&#25552;&#31034;&#31526;&#10;RPROMPT=$(echo &#34;$RED%D %T$FINISH&#34;)&#10;PROMPT=$(echo &#34;$CYAN%n@$YELLOW%M:$GREEN%/$_YELLOW&#62;$FINISH &#34;)&#10; &#10;#PROMPT=$(echo &#34;$BLUE%M$GREEN%/&#10;#$CYAN%n@$BLUE%M:$GREEN%/$_YELLOW&#62;&#62;&#62;$FINISH &#34;)&#10;#&#26631;&#39064;&#26639;&#12289;&#20219;&#21153;&#26639;&#26679;&#24335;&#123;&#123;&#123;&#10;case $TERM in (*xterm*|*rxvt*|(dt|k|E)term)&#10;precmd () &#123; print -Pn &#34;\e]0;%n@%M//%/\a&#34; &#125;&#10;preexec () &#123; print -Pn &#34;\e]0;%n@%M//%/\ $1\a&#34; &#125;&#10;;;&#10;esac&#10;#&#125;&#125;&#125;&#10; &#10;#&#32534;&#36753;&#22120;&#10;export EDITOR=vim&#10;#&#36755;&#20837;&#27861;&#10;export XMODIFIERS=&#34;@im=ibus&#34;&#10;export QT_MODULE=ibus&#10;export GTK_MODULE=ibus&#10;#&#20851;&#20110;&#21382;&#21490;&#32426;&#24405;&#30340;&#37197;&#32622; &#123;&#123;&#123;&#10;#&#21382;&#21490;&#32426;&#24405;&#26465;&#30446;&#25968;&#37327;&#10;export HISTSIZE=10000&#10;#&#27880;&#38144;&#21518;&#20445;&#23384;&#30340;&#21382;&#21490;&#32426;&#24405;&#26465;&#30446;&#25968;&#37327;&#10;export SAVEHIST=10000&#10;#&#21382;&#21490;&#32426;&#24405;&#25991;&#20214;&#10;export HISTFILE=~/.zhistory&#10;#&#20197;&#38468;&#21152;&#30340;&#26041;&#24335;&#20889;&#20837;&#21382;&#21490;&#32426;&#24405;&#10;setopt INC_APPEND_HISTORY&#10;#&#22914;&#26524;&#36830;&#32493;&#36755;&#20837;&#30340;&#21629;&#20196;&#30456;&#21516;&#65292;&#21382;&#21490;&#32426;&#24405;&#20013;&#21482;&#20445;&#30041;&#19968;&#20010;&#10;setopt HIST_IGNORE_DUPS&#10;#&#20026;&#21382;&#21490;&#32426;&#24405;&#20013;&#30340;&#21629;&#20196;&#28155;&#21152;&#26102;&#38388;&#25139;&#10;setopt EXTENDED_HISTORY      &#10; &#10;#&#21551;&#29992; cd &#21629;&#20196;&#30340;&#21382;&#21490;&#32426;&#24405;&#65292;cd -[TAB]&#36827;&#20837;&#21382;&#21490;&#36335;&#24452;&#10;setopt AUTO_PUSHD&#10;#&#30456;&#21516;&#30340;&#21382;&#21490;&#36335;&#24452;&#21482;&#20445;&#30041;&#19968;&#20010;&#10;setopt PUSHD_IGNORE_DUPS&#10; &#10;#&#22312;&#21629;&#20196;&#21069;&#28155;&#21152;&#31354;&#26684;&#65292;&#19981;&#23558;&#27492;&#21629;&#20196;&#28155;&#21152;&#21040;&#32426;&#24405;&#25991;&#20214;&#20013;&#10;#setopt HIST_IGNORE_SPACE&#10;#&#125;&#125;&#125;&#10; &#10;#&#27599;&#20010;&#30446;&#24405;&#20351;&#29992;&#29420;&#31435;&#30340;&#21382;&#21490;&#32426;&#24405;&#123;&#123;&#123;&#10;cd() &#123;&#10;builtin cd &#34;$@&#34;                             # do actual cd&#10;fc -W                                       # write current history  file&#10;local HISTDIR=&#34;$HOME/.zsh_history$PWD&#34;      # use nested folders for history&#10;if  [ ! -d &#34;$HISTDIR&#34; ] ; then          # create folder if needed&#10;mkdir -p &#34;$HISTDIR&#34;&#10;fi&#10;export HISTFILE=&#34;$HISTDIR/zhistory&#34;     # set new history file&#10;touch $HISTFILE&#10;local ohistsize=$HISTSIZE&#10;HISTSIZE=0                              # Discard previous dir&#39;s history&#10;HISTSIZE=$ohistsize                     # Prepare for new dir&#39;s history&#10;fc -R                                       #read from current histfile&#10;&#125;&#10;mkdir -p $HOME/.zsh_history$PWD&#10;export HISTFILE=&#34;$HOME/.zsh_history$PWD/zhistory&#34;&#10; &#10;function allhistory &#123; cat $(find $HOME/.zsh_history -name zhistory) &#125;&#10;function convhistory &#123;&#10;sort $1 | uniq |&#10;sed &#39;s/^:\([ 0-9]*\):[0-9]*;\(.*\)/\1::::::\2/&#39; |&#10;awk -F&#34;::::::&#34; &#39;&#123; $1=strftime(&#34;%Y-%m-%d %T&#34;,$1) &#34;|&#34;; print &#125;&#39;&#10;&#125;&#10;#&#20351;&#29992; histall &#21629;&#20196;&#26597;&#30475;&#20840;&#37096;&#21382;&#21490;&#32426;&#24405;&#10;function histall &#123; convhistory =(allhistory) |&#10;sed &#39;/^.\&#123;20\&#125; *cd/i\\&#39; &#125;&#10;#&#20351;&#29992; hist &#26597;&#30475;&#24403;&#21069;&#30446;&#24405;&#21382;&#21490;&#32426;&#24405;&#10;function hist &#123; convhistory $HISTFILE &#125;&#10; &#10;#&#20840;&#37096;&#21382;&#21490;&#32426;&#24405; top50&#10;function top50 &#123; allhistory | awk -F&#39;:[ 0-9]*:[0-9]*;&#39; &#39;&#123; $1=&#34;&#34; ; print &#125;&#39; | sed &#39;s/ /\n/g&#39; | sed &#39;/^$/d&#39; | sort | uniq -c | sort -nr | head -n 50 &#125;&#10; &#10;#&#125;&#125;&#125;&#10; &#10;#&#26434;&#39033; &#123;&#123;&#123;&#10;#&#20801;&#35768;&#22312;&#20132;&#20114;&#27169;&#24335;&#20013;&#20351;&#29992;&#27880;&#37322;  &#20363;&#22914;&#65306;&#10;#cmd #&#36825;&#26159;&#27880;&#37322;&#10;setopt INTERACTIVE_COMMENTS      &#10; &#10;#&#21551;&#29992;&#33258;&#21160; cd&#65292;&#36755;&#20837;&#30446;&#24405;&#21517;&#22238;&#36710;&#36827;&#20837;&#30446;&#24405;&#10;#&#31245;&#24494;&#26377;&#28857;&#28151;&#20081;&#65292;&#19981;&#22914; cd &#34917;&#20840;&#23454;&#29992;&#10;setopt AUTO_CD&#10; &#10;#&#25193;&#23637;&#36335;&#24452;&#10;#/v/c/p/p =&#62; /var/cache/pacman/pkg&#10;setopt complete_in_word&#10; &#10;#&#31105;&#29992; core dumps&#10;limit coredumpsize 0&#10; &#10;#Emacs&#39118;&#26684; &#38190;&#32465;&#23450;&#10;bindkey -e&#10;#bindkey -v&#10;#&#35774;&#32622; [DEL]&#38190; &#20026;&#21521;&#21518;&#21024;&#38500;&#10;#bindkey &#34;\e[3~&#34; delete-char&#10; &#10;#&#20197;&#19979;&#23383;&#31526;&#35270;&#20026;&#21333;&#35789;&#30340;&#19968;&#37096;&#20998;&#10;WORDCHARS=&#39;*?_-[]~=&#38;;!#$%^()&#123;&#125;&#60;&#62;&#39;&#10;#&#125;&#125;&#125;&#10; &#10;#&#33258;&#21160;&#34917;&#20840;&#21151;&#33021; &#123;&#123;&#123;&#10;setopt AUTO_LIST&#10;setopt AUTO_MENU&#10;#&#24320;&#21551;&#27492;&#36873;&#39033;&#65292;&#34917;&#20840;&#26102;&#20250;&#30452;&#25509;&#36873;&#20013;&#33756;&#21333;&#39033;&#10;#setopt MENU_COMPLETE&#10; &#10;autoload -U compinit&#10;compinit&#10; &#10;#&#33258;&#21160;&#34917;&#20840;&#32531;&#23384;&#10;#zstyle &#39;:completion::complete:*&#39; use-cache on&#10;#zstyle &#39;:completion::complete:*&#39; cache-path .zcache&#10;#zstyle &#39;:completion:*:cd:*&#39; ignore-parents parent pwd&#10; &#10;#&#33258;&#21160;&#34917;&#20840;&#36873;&#39033;&#10;zstyle &#39;:completion:*&#39; verbose yes&#10;zstyle &#39;:completion:*&#39; menu select&#10;zstyle &#39;:completion:*:*:default&#39; force-list always&#10;zstyle &#39;:completion:*&#39; select-prompt &#39;%SSelect:  lines: %L  matches: %M  [%p]&#39;&#10; &#10;zstyle &#39;:completion:*:match:*&#39; original only&#10;zstyle &#39;:completion::prefix-1:*&#39; completer _complete&#10;zstyle &#39;:completion:predict:*&#39; completer _complete&#10;zstyle &#39;:completion:incremental:*&#39; completer _complete _correct&#10;zstyle &#39;:completion:*&#39; completer _complete _prefix _correct _prefix _match _approximate&#10; &#10;#&#36335;&#24452;&#34917;&#20840;&#10;zstyle &#39;:completion:*&#39; expand &#39;yes&#39;&#10;zstyle &#39;:completion:*&#39; squeeze-shlashes &#39;yes&#39;&#10;zstyle &#39;:completion::complete:*&#39; &#39;\\&#39;&#10; &#10;#&#24425;&#33394;&#34917;&#20840;&#33756;&#21333;&#10;eval $(dircolors -b)&#10;export ZLSCOLORS=&#34;$&#123;LS_COLORS&#125;&#34;&#10;zmodload zsh/complist&#10;zstyle &#39;:completion:*&#39; list-colors $&#123;(s.:.)LS_COLORS&#125;&#10;zstyle &#39;:completion:*:*:kill:*:processes&#39; list-colors &#39;=(#b) #([0-9]#)*=0=01;31&#39;&#10; &#10;#&#20462;&#27491;&#22823;&#23567;&#20889;&#10;zstyle &#39;:completion:*&#39; matcher-list &#39;&#39; &#39;m:&#123;a-zA-Z&#125;=&#123;A-Za-z&#125;&#39;&#10;#&#38169;&#35823;&#26657;&#27491;&#10;zstyle &#39;:completion:*&#39; completer _complete _match _approximate&#10;zstyle &#39;:completion:*:match:*&#39; original only&#10;zstyle &#39;:completion:*:approximate:*&#39; max-errors 1 numeric&#10; &#10;#kill &#21629;&#20196;&#34917;&#20840;&#10;compdef pkill=kill&#10;compdef pkill=killall&#10;zstyle &#39;:completion:*:*:kill:*&#39; menu yes select&#10;zstyle &#39;:completion:*:*:*:*:processes&#39; force-list always&#10;zstyle &#39;:completion:*:processes&#39; command &#39;ps -au$USER&#39;&#10; &#10;#&#34917;&#20840;&#31867;&#22411;&#25552;&#31034;&#20998;&#32452;&#10;zstyle &#39;:completion:*:matches&#39; group &#39;yes&#39;&#10;zstyle &#39;:completion:*&#39; group-name &#39;&#39;&#10;zstyle &#39;:completion:*:options&#39; description &#39;yes&#39;&#10;zstyle &#39;:completion:*:options&#39; auto-description &#39;%d&#39;&#10;zstyle &#39;:completion:*:descriptions&#39; format $&#39;\e[01;33m -- %d --\e[0m&#39;&#10;zstyle &#39;:completion:*:messages&#39; format $&#39;\e[01;35m -- %d --\e[0m&#39;&#10;zstyle &#39;:completion:*:warnings&#39; format $&#39;\e[01;31m -- No Matches Found --\e[0m&#39;&#10;zstyle &#39;:completion:*:corrections&#39; format $&#39;\e[01;32m -- %d (errors: %e) --\e[0m&#39;&#10; &#10;# cd ~ &#34917;&#20840;&#39034;&#24207;&#10;zstyle &#39;:completion:*:-tilde-:*&#39; group-order &#39;named-directories&#39; &#39;path-directories&#39; &#39;users&#39; &#39;expand&#39;&#10;#&#125;&#125;&#125;&#10; &#10;##&#34892;&#32534;&#36753;&#39640;&#20142;&#27169;&#24335; &#123;&#123;&#123;&#10;# Ctrl+@ &#35774;&#32622;&#26631;&#35760;&#65292;&#26631;&#35760;&#21644;&#20809;&#26631;&#28857;&#20043;&#38388;&#20026; region&#10;zle_highlight=(region:bg=magenta #&#36873;&#20013;&#21306;&#22495;&#10;special:bold      #&#29305;&#27530;&#23383;&#31526;&#10;isearch:underline)#&#25628;&#32034;&#26102;&#20351;&#29992;&#30340;&#20851;&#38190;&#23383;&#10;#&#125;&#125;&#125;&#10; &#10;##&#31354;&#34892;(&#20809;&#26631;&#22312;&#34892;&#39318;)&#34917;&#20840; &#34;cd &#34; &#123;&#123;&#123;&#10;user-complete()&#123;&#10;case $BUFFER in&#10;&#34;&#34; )                       # &#31354;&#34892;&#22635;&#20837; &#34;cd &#34;&#10;BUFFER=&#34;cd &#34;&#10;zle end-of-line&#10;zle expand-or-complete&#10;;;&#10;&#34;cd --&#34; )                  # &#34;cd --&#34; &#26367;&#25442;&#20026; &#34;cd +&#34;&#10;BUFFER=&#34;cd +&#34;&#10;zle end-of-line&#10;zle expand-or-complete&#10;;;&#10;&#34;cd +-&#34; )                  # &#34;cd +-&#34; &#26367;&#25442;&#20026; &#34;cd -&#34;&#10;BUFFER=&#34;cd -&#34;&#10;zle end-of-line&#10;zle expand-or-complete&#10;;;&#10;* )&#10;zle expand-or-complete&#10;;;&#10;esac&#10;&#125;&#10;zle -N user-complete&#10;bindkey &#34;\t&#34; user-complete&#10;#&#125;&#125;&#125;&#10; &#10;##&#22312;&#21629;&#20196;&#21069;&#25554;&#20837; sudo &#123;&#123;&#123;&#10;#&#23450;&#20041;&#21151;&#33021;&#10;sudo-command-line() &#123;&#10;[[ -z $BUFFER ]] &#38;&#38; zle up-history&#10;[[ $BUFFER != sudo\ * ]] &#38;&#38; BUFFER=&#34;sudo $BUFFER&#34;&#10;zle end-of-line                 #&#20809;&#26631;&#31227;&#21160;&#21040;&#34892;&#26411;&#10;&#125;&#10;zle -N sudo-command-line&#10;#&#23450;&#20041;&#24555;&#25463;&#38190;&#20026;&#65306; [Esc] [Esc]&#10;bindkey &#34;\e\e&#34; sudo-command-line&#10;#&#125;&#125;&#125;&#10; &#10;#&#21629;&#20196;&#21035;&#21517; &#123;&#123;&#123;&#10;alias cp=&#39;cp -i&#39;&#10;alias mv=&#39;mv -i&#39;&#10;alias rm=&#39;rm -i&#39;&#10;alias ls=&#39;ls -F --color=auto&#39;&#10;alias ll=&#39;ls -al&#39;&#10;alias grep=&#39;grep --color=auto&#39;&#10;alias la=&#39;ls -a&#39;&#10;alias pacman=&#39;sudo pacman-color&#39;&#10;alias p=&#39;sudo pacman-color&#39;&#10;alias y=&#39;yaourt&#39;&#10;alias h=&#39;htop&#39;&#10;alias vim=&#39;sudo vim&#39;&#10; &#10;#[Esc][h] man &#24403;&#21069;&#21629;&#20196;&#26102;&#65292;&#26174;&#31034;&#31616;&#30701;&#35828;&#26126;&#10;alias run-help &#62;&#38;/dev/null &#38;&#38; unalias run-help&#10;autoload run-help&#10; &#10;#&#21382;&#21490;&#21629;&#20196; top10&#10;alias top10=&#39;print -l  $&#123;(o)history%% *&#125; | uniq -c | sort -nr | head -n 10&#39;&#10;#&#125;&#125;&#125;&#10; &#10;#&#36335;&#24452;&#21035;&#21517; &#123;&#123;&#123;&#10;#&#36827;&#20837;&#30456;&#24212;&#30340;&#36335;&#24452;&#26102;&#21482;&#35201; cd ~xxx&#10;hash -d A=&#34;/media/ayu/dearest&#34;&#10;hash -d H=&#34;/media/data/backup/ayu&#34;&#10;hash -d E=&#34;/etc/&#34;&#10;hash -d D=&#34;/home/ayumi/Documents&#34;&#10;#&#125;&#125;&#125;&#10; &#10;##for Emacs &#123;&#123;&#123;&#10;#&#22312; Emacs&#32456;&#31471; &#20013;&#20351;&#29992; Zsh &#30340;&#19968;&#20123;&#35774;&#32622; &#19981;&#25512;&#33616;&#22312; Emacs &#20013;&#20351;&#29992;&#23427;&#10;#if [[ &#34;$TERM&#34; == &#34;dumb&#34; ]]; then&#10;#setopt No_zle&#10;#PROMPT=&#39;%n@%M %/&#10;#&#62;&#62;&#39;&#10;#alias ls=&#39;ls -F&#39;&#10;#fi&#10;#&#125;&#125;&#125;&#10; &#10;#&#123;&#123;&#123;&#33258;&#23450;&#20041;&#34917;&#20840;&#10;#&#34917;&#20840; ping&#10;zstyle &#39;:completion:*:ping:*&#39; hosts 192.168.1.&#123;1,50,51,100,101&#125; www.google.com&#10; &#10;#&#34917;&#20840; ssh scp sftp &#31561;&#10;#zstyle -e &#39;:completion::*:*:*:hosts&#39; hosts &#39;reply=($&#123;=$&#123;$&#123;(f)&#34;$(cat &#123;/etc/ssh_,~/.ssh/known_&#125;hosts(|2)(N) /dev/null)&#34;&#125;%%[# ]*&#125;//,/ &#125;)&#39;&#10;#&#125;&#125;&#125;&#10; &#10;#&#123;&#123;&#123; F1 &#35745;&#31639;&#22120;&#10;arith-eval-echo() &#123;&#10;LBUFFER=&#34;$&#123;LBUFFER&#125;echo \$(( &#34;&#10;RBUFFER=&#34; ))$RBUFFER&#34;&#10;&#125;&#10;zle -N arith-eval-echo&#10;bindkey &#34;^[[11~&#34; arith-eval-echo&#10;#&#125;&#125;&#125;&#10; &#10;####&#123;&#123;&#123;&#10;function timeconv &#123; date -d @$1 +&#34;%Y-%m-%d %T&#34; &#125;&#10; &#10;# &#125;&#125;&#125;&#10; &#10;zmodload zsh/mathfunc&#10;autoload -U zsh-mime-setup&#10;zsh-mime-setup&#10;setopt EXTENDED_GLOB&#10;#autoload -U promptinit&#10;#promptinit&#10;#prompt redhat&#10; &#10;setopt correctall&#10;autoload compinstall&#10; &#10;#&#28418;&#20142;&#21448;&#23454;&#29992;&#30340;&#21629;&#20196;&#39640;&#20142;&#30028;&#38754;&#10;setopt extended_glob&#10; TOKENS_FOLLOWED_BY_COMMANDS=(&#39;|&#39; &#39;||&#39; &#39;;&#39; &#39;&#38;&#39; &#39;&#38;&#38;&#39; &#39;sudo&#39; &#39;do&#39; &#39;time&#39; &#39;strace&#39;)&#10; &#10; recolor-cmd() &#123;&#10;     region_highlight=()&#10;     colorize=true&#10;     start_pos=0&#10;     for arg in $&#123;(z)BUFFER&#125;; do&#10;         ((start_pos+=$&#123;#BUFFER[$start_pos+1,-1]&#125;-$&#123;#$&#123;BUFFER[$start_pos+1,-1]## #&#125;&#125;))&#10;         ((end_pos=$start_pos+$&#123;#arg&#125;))&#10;         if $colorize; then&#10;             colorize=false&#10;             res=$(LC_ALL=C builtin type $arg 2&#62;/dev/null)&#10;             case $res in&#10;                 *&#39;reserved word&#39;*)   style=&#34;fg=magenta,bold&#34;;;&#10;                 *&#39;alias for&#39;*)       style=&#34;fg=cyan,bold&#34;;;&#10;                 *&#39;shell builtin&#39;*)   style=&#34;fg=yellow,bold&#34;;;&#10;                 *&#39;shell function&#39;*)  style=&#39;fg=green,bold&#39;;;&#10;                 *&#34;$arg is&#34;*)&#10;                     [[ $arg = &#39;sudo&#39; ]] &#38;&#38; style=&#34;fg=red,bold&#34; || style=&#34;fg=blue,bold&#34;;;&#10;                 *)                   style=&#39;none,bold&#39;;;&#10;             esac&#10;             region_highlight+=(&#34;$start_pos $end_pos $style&#34;)&#10;         fi&#10;         [[ $&#123;$&#123;TOKENS_FOLLOWED_BY_COMMANDS[(r)$&#123;arg//|/\|&#125;]&#125;:+yes&#125; = &#39;yes&#39; ]] &#38;&#38; colorize=true&#10;         start_pos=$end_pos&#10;     done&#10; &#125;&#10;check-cmd-self-insert() &#123; zle .self-insert &#38;&#38; recolor-cmd &#125;&#10; check-cmd-backward-delete-char() &#123; zle .backward-delete-char &#38;&#38; recolor-cmd &#125;&#10; &#10; zle -N self-insert check-cmd-self-insert&#10; zle -N backward-delete-char check-cmd-backward-delete-char</span><br></pre></td></tr></table></figure>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/mac/">mac</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/zsh/">zsh</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://xudongrocky.github.io/2015/07/31/打造漂亮实用的MAC OS 终端md/" data-title="强大的zsh配置文件 | Rocky&#39;blog" data-tsina="514578909" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/04/06/16种度盘搜索方法/"  title="16种度盘搜索方法">
+ <strong>下一篇：</strong><br/> 
+ <span>16种度盘搜索方法
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2015/07/31/打造漂亮实用的MAC OS 终端md/" data-title="强大的zsh配置文件" data-url="http://xudongrocky.github.io/2015/07/31/打造漂亮实用的MAC OS 终端md/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ 
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Mac/" title="Mac">Mac<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/github/" title="github">github<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/mac/" title="mac">mac<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/markdown/" title="markdown">markdown<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/php/" title="php">php<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/其他/" title="其他">其他<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/服务器/" title="服务器">服务器<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+  <div class="tagcloudlist">
+    <p class="asidetitle">标签云</p>
+    <div class="tagcloudlist clearfix">
+       <a href="/tags/ftp/" style="font-size: 10px;">ftp</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 20px;">github</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/php/" style="font-size: 20px;">php</a> <a href="/tags/wget/" style="font-size: 10px;">wget</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/xml/" style="font-size: 10px;">xml</a> <a href="/tags/zsh/" style="font-size: 10px;">zsh</a> <a href="/tags/网盘技巧/" style="font-size: 10px;">网盘技巧</a>
+    </div>
+  </div>
+
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+ <iframe width="200" height="440" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=200&height=440&fansRow=2&ptype=1&speed=0&skin=5&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=2180032564&verifier=11a31d47&colors=d6f3f7,f9f9f9,7e7e7e,0082cb,41a6cb&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m just a programmer <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/2180032564" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/1" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		<a href="http://stackoverflow.com/users/1" target="_blank" class="icon-stack-overflow" title="stackoverflow"></a>
+		
+		
+		<a href="https://twitter.com/1" target="_blank" class="icon-twitter" title="twitter"></a>
+		
+		
+		<a href="https://www.facebook.com/1" target="_blank" class="icon-facebook" title="facebook"></a>
+		
+		
+		<a href="https://www.linkedin.com/in/1" target="_blank" class="icon-linkedin" title="linkedin"></a>
+		
+		
+		
+		<a href="http://www.zhihu.com/people/1" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:xudongrocky@outlook.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
+		
+		<a href="/about" target="_blank" title="Rockyx">Rockyx</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"xdking"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
