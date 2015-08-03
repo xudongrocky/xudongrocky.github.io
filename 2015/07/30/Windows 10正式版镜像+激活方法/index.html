@@ -4,26 +4,29 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>windows下ftp自动更新 | Rocky&#39;blog</title>
+    <title>Windows 10正式版镜像+激活方法 | Rocky&#39;blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Rockyx">
     
 
     
-    <meta name="description" content="服务器（windows 2008 RC2)迁移到阿里云后， 原来的ftp自动更新脚本（php脚本，使用了ftp模块的函数）出现问题了，连接到海外的FTP服务器（澳大利亚的主机）后，列目录会出错，具体就是ftp_nlist函数执行超时，无法下载文件，具体原因未知。
-当前服务器已开通FTP服务，测试用FTP脚本连接本地FTP没有问题的，于是现在解决方案为：在本地新建一个帐户，想办法用其他方法将海外FT">
+    <meta name="description" content="微软于2015年7月29日正式发布了Windows 10正式版，也放出了原版镜像下载。从网上一些评价来看，好像还不错。有兴趣的可以去试试。博主未测试，这里给大家奉上镜像下载地址和激活方法。重要提示：不管从什么地方下载镜像，文件名可以不一样，但是体积、SHA1校验码必须一致，尤其是SHA1，不一样的请勿安装。
+激活方法：
+一、密钥激活安装完成后以管理员身份打开CMD命令行窗口，专业版用户请依次输入：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="windows下ftp自动更新">
-<meta property="og:url" content="http://xudongrocky.github.io/2014/06/10/windows-ftp-bat/index.html">
+<meta property="og:title" content="Windows 10正式版镜像+激活方法">
+<meta property="og:url" content="http://xudongrocky.github.io/2015/07/30/Windows 10正式版镜像+激活方法/index.html">
 <meta property="og:site_name" content="Rocky'blog">
-<meta property="og:description" content="服务器（windows 2008 RC2)迁移到阿里云后， 原来的ftp自动更新脚本（php脚本，使用了ftp模块的函数）出现问题了，连接到海外的FTP服务器（澳大利亚的主机）后，列目录会出错，具体就是ftp_nlist函数执行超时，无法下载文件，具体原因未知。
-当前服务器已开通FTP服务，测试用FTP脚本连接本地FTP没有问题的，于是现在解决方案为：在本地新建一个帐户，想办法用其他方法将海外FT">
-<meta property="og:updated_time" content="2014-08-25T05:39:12.000Z">
+<meta property="og:description" content="微软于2015年7月29日正式发布了Windows 10正式版，也放出了原版镜像下载。从网上一些评价来看，好像还不错。有兴趣的可以去试试。博主未测试，这里给大家奉上镜像下载地址和激活方法。重要提示：不管从什么地方下载镜像，文件名可以不一样，但是体积、SHA1校验码必须一致，尤其是SHA1，不一样的请勿安装。
+激活方法：
+一、密钥激活安装完成后以管理员身份打开CMD命令行窗口，专业版用户请依次输入：">
+<meta property="og:updated_time" content="2015-08-03T03:08:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="windows下ftp自动更新">
-<meta name="twitter:description" content="服务器（windows 2008 RC2)迁移到阿里云后， 原来的ftp自动更新脚本（php脚本，使用了ftp模块的函数）出现问题了，连接到海外的FTP服务器（澳大利亚的主机）后，列目录会出错，具体就是ftp_nlist函数执行超时，无法下载文件，具体原因未知。
-当前服务器已开通FTP服务，测试用FTP脚本连接本地FTP没有问题的，于是现在解决方案为：在本地新建一个帐户，想办法用其他方法将海外FT">
+<meta name="twitter:title" content="Windows 10正式版镜像+激活方法">
+<meta name="twitter:description" content="微软于2015年7月29日正式发布了Windows 10正式版，也放出了原版镜像下载。从网上一些评价来看，好像还不错。有兴趣的可以去试试。博主未测试，这里给大家奉上镜像下载地址和激活方法。重要提示：不管从什么地方下载镜像，文件名可以不一样，但是体积、SHA1校验码必须一致，尤其是SHA1，不一样的请勿安装。
+激活方法：
+一、密钥激活安装完成后以管理员身份打开CMD命令行窗口，专业版用户请依次输入：">
 <meta name="twitter:creator" content="@1">
 
     
@@ -79,14 +82,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/06/10/windows-ftp-bat/" title="windows下ftp自动更新" itemprop="url">windows下ftp自动更新</a>
+      <a href="/2015/07/30/Windows 10正式版镜像+激活方法/" title="Windows 10正式版镜像+激活方法" itemprop="url">Windows 10正式版镜像+激活方法</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Rockyx" target="_blank" itemprop="author">Rockyx</a>
 		
   <p class="article-time">
-    <time datetime="2014-06-09T16:00:00.000Z" itemprop="datePublished"> 发表于 Jun 10 2014</time>
+    <time datetime="2015-07-29T16:00:00.000Z" itemprop="datePublished"> 发表于 Jul 30 2015</time>
     
   </p>
 </header>
@@ -95,19 +98,28 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用windows自带的ftp命令"><span class="toc-number">1.</span> <span class="toc-text">使用windows自带的ftp命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用_wget"><span class="toc-number">2.</span> <span class="toc-text">使用 wget</span></a></li></ol>
+			
 		
 		</div>
 		
-		<p>服务器（<code>windows 2008 RC2</code>)迁移到<code>阿里云</code>后， 原来的ftp自动更新脚本（php脚本，使用了ftp模块的函数）出现问题了，连接到海外的FTP服务器（澳大利亚的主机）后，列目录会出错，具体就是<code>ftp_nlist</code>函数执行超时，无法下载文件，具体原因未知。</p>
-<p>当前服务器已开通FTP服务，测试用FTP脚本连接本地FTP没有问题的，于是现在解决方案为：<br>在本地新建一个帐户，想办法用其他方法将海外FTP的文件同步到本地FTP，将FTP脚本的配置修改为本地连接的帐户，使用同步后的文件更新,这样自动更新脚本的逻辑无需更改。<br><a id="more"></a></p>
-<h3 id="使用windows自带的ftp命令">使用windows自带的ftp命令</h3><p>先写一个批处理 <code>auto.ftp</code>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">open aaa.com.au </span><br><span class="line">user 用户名</span><br><span class="line">密码</span><br><span class="line">dir </span><br><span class="line">get XXX.zip</span><br><span class="line"><span class="built_in">bye</span></span><br></pre></td></tr></table></figure>
-<p>然后在命令行下执行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ftp -n <span class="operator">-s</span>:auto.ftp</span><br></pre></td></tr></table></figure>
-<p>在本地执行可成功列目录和下载文件，但是放到服务器执行，到列目录时半天没响应，尝试以失败告终。</p>
-<h3 id="使用_wget">使用 <code>wget</code></h3><p>这是个在linux下很流行的一个工具，在windows下也有相应的版本，它不但支持http协议，也支持FTP下载，下载后直接扔<code>%path%</code>目录里去就行了，完成写个批处理，内容如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">rem 使用wget获取到本地ftp。</span><br><span class="line"><span class="built_in">cd</span> /d F:\myftp</span><br><span class="line">md logs</span><br><span class="line">del *.zip*</span><br><span class="line">wget ftp://aaa.com.au/file_%date:~<span class="number">0</span>,<span class="number">4</span>%%date:~<span class="number">5</span>,<span class="number">2</span>%.zip --ftp-user=用户名 --ftp-password=密码 </span><br><span class="line">wget -q http://myhost/ftp-import.php --output-document=logs\%date:~<span class="number">0</span>,<span class="number">4</span>%%date:~<span class="number">5</span>,<span class="number">2</span>%%date:~<span class="number">8</span>,<span class="number">2</span>%.update.log</span><br></pre></td></tr></table></figure></p>
-<p>执行后文件将被下载到<code>f:\myftp</code>目录下。值得注意的是批处理的日期表示法。</p>
+		<p>微软于2015年7月29日正式发布了Windows 10正式版，也放出了原版镜像下载。从网上一些评价来看，好像还不错。有兴趣的可以去试试。博主未测试，这里给大家奉上镜像下载地址和激活方法。重要提示：不管从什么地方下载镜像，文件名可以不一样，但是体积、SHA1校验码必须一致，尤其是SHA1，不一样的请勿安装。</p>
+<p>激活方法：</p>
+<p>一、密钥激活<br><br>安装完成后以管理员身份打开CMD命令行窗口，专业版用户请依次输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slmgr /skms kms.xspace.in</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slmgr /ato</span><br></pre></td></tr></table></figure>
+<p>其他专业版密钥：<br><br>NJ4MX-VQQ7Q-FP3DB-VDGHX-7XM87<br></p>
+<p>MH37W-N47XK-V7XM9-C7227-GCQG9<br></p>
+<p>VK7JG-NPHTM-C97JM-9MPGT-3V66T<br><br></p>
+<p>二、软件激活<br><br>使用HEU_KMS_Activator_v10.0.0激活工具激活。<br></p>
+<p>官方下载：链接: <a href="http://pan.baidu.com/s/1hqlL9ek" target="_blank" rel="external">http://pan.baidu.com/s/1hqlL9ek</a> 密码: vv9t<br></p>
+<p>镜像下载：<br></p>
+<p>【32位简体中文家庭/专业版】<br><br>文件名：cn_windows_10_multiple_editions_x86_dvd_6846431.iso<br><br>体积：3.01GB<br><br>SHA1：21B824F402927E76C65160B62EB8A4EBBABE9C6E<br></p>
+<p>百度网盘：链接: <a href="http://pan.baidu.com/s/1pJIbzlx" target="_blank" rel="external">http://pan.baidu.com/s/1pJIbzlx</a> 密码: tp43<br></p>
+<p>P2P下载：ed2k://|file|cn_windows_10_multiple_editions_x86_dvd_6846431.iso|3233482752|B5C706594F5DC697B2A098420C801112|/<br></p>
+<p>【64位简体中文家庭/专业版】<br><br>文件名：cn_windows_10_multiple_editions_x64_dvd_6848463.iso<br><br>体积：4.01GB<br><br>SHA1：C71D49A6144772F352806201EF564951BE55EDD5<br><br></p>
+<p>百度网盘：链接: <a href="http://pan.baidu.com/s/1i3D3TIH" target="_blank" rel="external">http://pan.baidu.com/s/1i3D3TIH</a> 密码: 9j4d<br></p>
+<p>P2P下载：ed2k://|file|cn_windows_10_multiple_editions_x64_dvd_6848463.iso|4303300608|94FD861E82458005A9CA8E617379856A|/</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -115,13 +127,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/服务器/">服务器</a>
+  <a class="article-category-link" href="/categories/其他/">其他</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/ftp/">ftp</a><a href="/tags/wget/">wget</a><a href="/tags/windows/">windows</a>
+  <span></span> <a href="/tags/windows/">windows</a>
   </div>
 
 </div>
@@ -130,7 +142,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://xudongrocky.github.io/2014/06/10/windows-ftp-bat/" data-title="windows下ftp自动更新 | Rocky&#39;blog" data-tsina="514578909" class="share clearfix">
+	  <div data-url="http://xudongrocky.github.io/2015/07/30/Windows 10正式版镜像+激活方法/" data-title="Windows 10正式版镜像+激活方法 | Rocky&#39;blog" data-tsina="514578909" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -144,19 +156,27 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2014/08/25/php万年历的实现代码示例/" title="php万年历的实现代码示例">
+ <a href="/2015/07/31/zsh配置安装以及配置/" title="zsh配置安装以及配置">
   <strong>上一篇：</strong><br/>
   <span>
-  php万年历的实现代码示例</span>
+  zsh配置安装以及配置</span>
 </a>
 </div>
 
+
+<div class="next">
+<a href="/2015/04/06/16种度盘搜索方法/"  title="16种度盘搜索方法">
+ <strong>下一篇：</strong><br/> 
+ <span>16种度盘搜索方法
+</span>
+</a>
+</div>
 
 </nav>
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2014/06/10/windows-ftp-bat/" data-title="windows下ftp自动更新" data-url="http://xudongrocky.github.io/2014/06/10/windows-ftp-bat/"></div>
+	<div class="ds-thread" data-thread-key="2015/07/30/Windows 10正式版镜像+激活方法/" data-title="Windows 10正式版镜像+激活方法" data-url="http://xudongrocky.github.io/2015/07/30/Windows 10正式版镜像+激活方法/"></div>
 </section>
 
 
@@ -166,7 +186,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用windows自带的ftp命令"><span class="toc-number">1.</span> <span class="toc-text">使用windows自带的ftp命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用_wget"><span class="toc-number">2.</span> <span class="toc-text">使用 wget</span></a></li></ol>
+ 
  
   </div>
 
