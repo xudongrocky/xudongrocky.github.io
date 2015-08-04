@@ -4,26 +4,49 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>windows下ftp自动更新 | Rocky&#39;blog</title>
+    <title>RAID5,HS配置 | Rocky&#39;blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Rockyx">
     
 
     
-    <meta name="description" content="服务器（windows 2008 RC2)迁移到阿里云后， 原来的ftp自动更新脚本（php脚本，使用了ftp模块的函数）出现问题了，连接到海外的FTP服务器（澳大利亚的主机）后，列目录会出错，具体就是ftp_nlist函数执行超时，无法下载文件，具体原因未知。
-当前服务器已开通FTP服务，测试用FTP脚本连接本地FTP没有问题的，于是现在解决方案为：在本地新建一个帐户，想办法用其他方法将海外FT">
+    <meta name="description" content="服务器机型：DELL T430
+由于公司要求，安装VMWare ESXi6.0 然后安装Windows Server 2008 R2 Sta 以及 Windows Server 2012 R2 Sta 。
+​准备：
+免费VMWare请下载：https://my.vmware.com/cn/web/vmware/evalcenter?p=free-esxi6
+注册帐号，下载VMWare ESXi6.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="windows下ftp自动更新">
-<meta property="og:url" content="http://xudongrocky.github.io/2014/06/10/windows-ftp-bat/index.html">
+<meta property="og:title" content="RAID5,HS配置">
+<meta property="og:url" content="http://xudongrocky.github.io/2015/06/27/VMWare ESXi 6.0和vSphere Client的安装及配置/index.html">
 <meta property="og:site_name" content="Rocky'blog">
-<meta property="og:description" content="服务器（windows 2008 RC2)迁移到阿里云后， 原来的ftp自动更新脚本（php脚本，使用了ftp模块的函数）出现问题了，连接到海外的FTP服务器（澳大利亚的主机）后，列目录会出错，具体就是ftp_nlist函数执行超时，无法下载文件，具体原因未知。
-当前服务器已开通FTP服务，测试用FTP脚本连接本地FTP没有问题的，于是现在解决方案为：在本地新建一个帐户，想办法用其他方法将海外FT">
-<meta property="og:updated_time" content="2015-08-04T01:54:19.000Z">
+<meta property="og:description" content="服务器机型：DELL T430
+由于公司要求，安装VMWare ESXi6.0 然后安装Windows Server 2008 R2 Sta 以及 Windows Server 2012 R2 Sta 。
+​准备：
+免费VMWare请下载：https://my.vmware.com/cn/web/vmware/evalcenter?p=free-esxi6
+注册帐号，下载VMWare ESXi6.">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/81f0a834gw1euqe7hxvs8j20pq0jz78r.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/81f0a834gw1euqe7w2ai5j20rq0ku0yt.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/81f0a834gw1euqe7w2ai5j20rq0ku0yt.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/81f0a834gw1euqe7w2ai5j20rq0ku0yt.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/81f0a834gw1euqe8reoi3j20xi0kb41v.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/81f0a834gw1euqe91uauij210i0ki4at.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/81f0a834gw1euqe91uauij210i0ki4at.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/81f0a834gw1euqe91uauij210i0ki4at.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/81f0a834gw1euqea144i6j20zi0iun6m.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/81f0a834gw1euqea86cnlj210n0j2wni.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/81f0a834gw1euqeag0vssj210d0khq7c.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/81f0a834gw1euqeag0vssj210d0khq7c.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/81f0a834gw1euqeawqjiwj20vq0kjgpr.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/81f0a834gw1euqeawqjiwj20vq0kjgpr.jpg">
+<meta property="og:updated_time" content="2015-08-04T03:04:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="windows下ftp自动更新">
-<meta name="twitter:description" content="服务器（windows 2008 RC2)迁移到阿里云后， 原来的ftp自动更新脚本（php脚本，使用了ftp模块的函数）出现问题了，连接到海外的FTP服务器（澳大利亚的主机）后，列目录会出错，具体就是ftp_nlist函数执行超时，无法下载文件，具体原因未知。
-当前服务器已开通FTP服务，测试用FTP脚本连接本地FTP没有问题的，于是现在解决方案为：在本地新建一个帐户，想办法用其他方法将海外FT">
+<meta name="twitter:title" content="RAID5,HS配置">
+<meta name="twitter:description" content="服务器机型：DELL T430
+由于公司要求，安装VMWare ESXi6.0 然后安装Windows Server 2008 R2 Sta 以及 Windows Server 2012 R2 Sta 。
+​准备：
+免费VMWare请下载：https://my.vmware.com/cn/web/vmware/evalcenter?p=free-esxi6
+注册帐号，下载VMWare ESXi6.">
 <meta name="twitter:creator" content="@1">
 
     
@@ -79,14 +102,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/06/10/windows-ftp-bat/" title="windows下ftp自动更新" itemprop="url">windows下ftp自动更新</a>
+      <a href="/2015/06/27/VMWare ESXi 6.0和vSphere Client的安装及配置/" title="RAID5,HS配置" itemprop="url">RAID5,HS配置</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Rockyx" target="_blank" itemprop="author">Rockyx</a>
 		
   <p class="article-time">
-    <time datetime="2014-06-09T16:00:00.000Z" itemprop="datePublished"> 发表于 Jun 10 2014</time>
+    <time datetime="2015-06-26T16:00:00.000Z" itemprop="datePublished"> 发表于 Jun 27 2015</time>
     
   </p>
 </header>
@@ -95,19 +118,31 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用windows自带的ftp命令"><span class="toc-number">1.</span> <span class="toc-text">使用windows自带的ftp命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用_wget"><span class="toc-number">2.</span> <span class="toc-text">使用 wget</span></a></li></ol>
+			
 		
 		</div>
 		
-		<p>服务器（<code>windows 2008 RC2</code>)迁移到<code>阿里云</code>后， 原来的ftp自动更新脚本（php脚本，使用了ftp模块的函数）出现问题了，连接到海外的FTP服务器（澳大利亚的主机）后，列目录会出错，具体就是<code>ftp_nlist</code>函数执行超时，无法下载文件，具体原因未知。</p>
-<p>当前服务器已开通FTP服务，测试用FTP脚本连接本地FTP没有问题的，于是现在解决方案为：<br>在本地新建一个帐户，想办法用其他方法将海外FTP的文件同步到本地FTP，将FTP脚本的配置修改为本地连接的帐户，使用同步后的文件更新,这样自动更新脚本的逻辑无需更改。<br><a id="more"></a></p>
-<h3 id="使用windows自带的ftp命令">使用windows自带的ftp命令</h3><p>先写一个批处理 <code>auto.ftp</code>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">open aaa.com.au </span><br><span class="line">user 用户名</span><br><span class="line">密码</span><br><span class="line">dir </span><br><span class="line">get XXX.zip</span><br><span class="line"><span class="built_in">bye</span></span><br></pre></td></tr></table></figure>
-<p>然后在命令行下执行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ftp -n <span class="operator">-s</span>:auto.ftp</span><br></pre></td></tr></table></figure>
-<p>在本地执行可成功列目录和下载文件，但是放到服务器执行，到列目录时半天没响应，尝试以失败告终。</p>
-<h3 id="使用_wget">使用 <code>wget</code></h3><p>这是个在linux下很流行的一个工具，在windows下也有相应的版本，它不但支持http协议，也支持FTP下载，下载后直接扔<code>%path%</code>目录里去就行了，完成写个批处理，内容如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">rem 使用wget获取到本地ftp。</span><br><span class="line"><span class="built_in">cd</span> /d F:\myftp</span><br><span class="line">md logs</span><br><span class="line">del *.zip*</span><br><span class="line">wget ftp://aaa.com.au/file_%date:~<span class="number">0</span>,<span class="number">4</span>%%date:~<span class="number">5</span>,<span class="number">2</span>%.zip --ftp-user=用户名 --ftp-password=密码 </span><br><span class="line">wget -q http://myhost/ftp-import.php --output-document=logs\%date:~<span class="number">0</span>,<span class="number">4</span>%%date:~<span class="number">5</span>,<span class="number">2</span>%%date:~<span class="number">8</span>,<span class="number">2</span>%.update.log</span><br></pre></td></tr></table></figure></p>
-<p>执行后文件将被下载到<code>f:\myftp</code>目录下。值得注意的是批处理的日期表示法。</p>
+		<p>服务器机型：DELL T430</p>
+<p>由于公司要求，安装VMWare ESXi6.0 然后安装Windows Server 2008 R2 Sta 以及 Windows Server 2012 R2 Sta 。</p>
+<p>​准备：</p>
+<p>免费VMWare请下载：<a href="https://my.vmware.com/cn/web/vmware/evalcenter?p=free-esxi6" target="_blank" rel="external">https://my.vmware.com/cn/web/vmware/evalcenter?p=free-esxi6</a></p>
+<p>注册帐号，下载VMWare ESXi6.0 镜像文件。写入U盘或者光盘（需要刻录机RW）。</p>
+<p>ok,开机F10进入BIOS，设置U盘启动。</p>
+<p><img src="http://ww1.sinaimg.cn/large/81f0a834gw1euqe7hxvs8j20pq0jz78r.jpg" alt="rocky"></p>
+<p><img src="http://ww3.sinaimg.cn/large/81f0a834gw1euqe7w2ai5j20rq0ku0yt.jpg" alt="rocky"></p>
+<p><img src="http://ww3.sinaimg.cn/large/81f0a834gw1euqe7w2ai5j20rq0ku0yt.jpg" alt="rocky"></p>
+<p><img src="http://ww3.sinaimg.cn/large/81f0a834gw1euqe7w2ai5j20rq0ku0yt.jpg" alt="rocky"></p>
+<p><img src="http://ww4.sinaimg.cn/large/81f0a834gw1euqe8reoi3j20xi0kb41v.jpg" alt="rocky"></p>
+<p><img src="http://ww2.sinaimg.cn/large/81f0a834gw1euqe91uauij210i0ki4at.jpg" alt="rocky"></p>
+<p><img src="http://ww2.sinaimg.cn/large/81f0a834gw1euqe91uauij210i0ki4at.jpg" alt="rocky"></p>
+<p><img src="http://ww2.sinaimg.cn/large/81f0a834gw1euqe91uauij210i0ki4at.jpg" alt="rocky"></p>
+<p><img src="http://ww4.sinaimg.cn/large/81f0a834gw1euqea144i6j20zi0iun6m.jpg" alt="rocky"></p>
+<p><img src="http://ww3.sinaimg.cn/large/81f0a834gw1euqea86cnlj210n0j2wni.jpg" alt="rocky"></p>
+<p><img src="http://ww4.sinaimg.cn/large/81f0a834gw1euqeag0vssj210d0khq7c.jpg" alt="rocky"></p>
+<p><img src="http://ww4.sinaimg.cn/large/81f0a834gw1euqeag0vssj210d0khq7c.jpg" alt="rocky"></p>
+<p><img src="http://ww4.sinaimg.cn/large/81f0a834gw1euqeawqjiwj20vq0kjgpr.jpg" alt="rocky"></p>
+<p><img src="http://ww4.sinaimg.cn/large/81f0a834gw1euqeawqjiwj20vq0kjgpr.jpg" alt="rocky"></p>
+<p>至此结束。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -121,7 +156,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/ftp/">ftp</a><a href="/tags/wget/">wget</a><a href="/tags/windows/">windows</a>
+  <span></span> <a href="/tags/ESXi/">ESXi</a>
   </div>
 
 </div>
@@ -130,7 +165,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://xudongrocky.github.io/2014/06/10/windows-ftp-bat/" data-title="windows下ftp自动更新 | Rocky&#39;blog" data-tsina="514578909" class="share clearfix">
+	  <div data-url="http://xudongrocky.github.io/2015/06/27/VMWare ESXi 6.0和vSphere Client的安装及配置/" data-title="RAID5,HS配置 | Rocky&#39;blog" data-tsina="514578909" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -144,19 +179,27 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2014/08/25/php_calendar/" title="php万年历的实现代码示例">
+ <a href="/2015/06/27/RAID5,HS配置/" title="RAID5,HS配置">
   <strong>上一篇：</strong><br/>
   <span>
-  php万年历的实现代码示例</span>
+  RAID5,HS配置</span>
 </a>
 </div>
 
+
+<div class="next">
+<a href="/2015/05/20/Z_coding/"  title="Zen Coding基本语法">
+ <strong>下一篇：</strong><br/> 
+ <span>Zen Coding基本语法
+</span>
+</a>
+</div>
 
 </nav>
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2014/06/10/windows-ftp-bat/" data-title="windows下ftp自动更新" data-url="http://xudongrocky.github.io/2014/06/10/windows-ftp-bat/"></div>
+	<div class="ds-thread" data-thread-key="2015/06/27/VMWare ESXi 6.0和vSphere Client的安装及配置/" data-title="RAID5,HS配置" data-url="http://xudongrocky.github.io/2015/06/27/VMWare ESXi 6.0和vSphere Client的安装及配置/"></div>
 </section>
 
 
@@ -166,7 +209,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用windows自带的ftp命令"><span class="toc-number">1.</span> <span class="toc-text">使用windows自带的ftp命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用_wget"><span class="toc-number">2.</span> <span class="toc-text">使用 wget</span></a></li></ol>
+ 
  
   </div>
 
