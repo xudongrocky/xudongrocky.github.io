@@ -4,32 +4,47 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>windows 安装 git 和使用github | Rocky&#39;blog</title>
+    <title>Linux vpn 配置 | Rocky&#39;blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Rockyx">
     
 
     
-    <meta name="description" content="TortoiseGit下载列表
-http://download.tortoisegit.org/tgit/
-当前最新版本为1.8.7.0，这里是32位系统安装包：
-http://download.tortoisegit.org/tgit/1.8.7.0/TortoiseGit-1.8.7.0-32bit.msi">
+    <meta name="description" content="安装环境：RHEL4 update 1
+###一，下载VPN服务器所需软件
+dkms-2.05-1.noarch.rpm
+动态内核模块支持的RPM安装包
+kernel_ppp_mppe-0.0.5-2dkms.noarch.rpm
+MPPE加密协议的内核补丁的RPM安装包
+ppp-2.4.3-5.rhel4.i386.rpm
+升级内置PPP到2.4.3版本，以支持MPPE加密协议
+pptpd-1.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="windows 安装 git 和使用github">
-<meta property="og:url" content="http://xudongrocky.github.io/2014/08/25/windows搭建git/index.html">
+<meta property="og:title" content="Linux vpn 配置">
+<meta property="og:url" content="http://xudongrocky.github.io/2015/05/26/Linux vpn 配置/index.html">
 <meta property="og:site_name" content="Rocky'blog">
-<meta property="og:description" content="TortoiseGit下载列表
-http://download.tortoisegit.org/tgit/
-当前最新版本为1.8.7.0，这里是32位系统安装包：
-http://download.tortoisegit.org/tgit/1.8.7.0/TortoiseGit-1.8.7.0-32bit.msi">
-<meta property="og:updated_time" content="2015-08-04T01:54:36.000Z">
+<meta property="og:description" content="安装环境：RHEL4 update 1
+###一，下载VPN服务器所需软件
+dkms-2.05-1.noarch.rpm
+动态内核模块支持的RPM安装包
+kernel_ppp_mppe-0.0.5-2dkms.noarch.rpm
+MPPE加密协议的内核补丁的RPM安装包
+ppp-2.4.3-5.rhel4.i386.rpm
+升级内置PPP到2.4.3版本，以支持MPPE加密协议
+pptpd-1.">
+<meta property="og:updated_time" content="2015-08-04T03:36:43.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="windows 安装 git 和使用github">
-<meta name="twitter:description" content="TortoiseGit下载列表
-http://download.tortoisegit.org/tgit/
-当前最新版本为1.8.7.0，这里是32位系统安装包：
-http://download.tortoisegit.org/tgit/1.8.7.0/TortoiseGit-1.8.7.0-32bit.msi">
+<meta name="twitter:title" content="Linux vpn 配置">
+<meta name="twitter:description" content="安装环境：RHEL4 update 1
+###一，下载VPN服务器所需软件
+dkms-2.05-1.noarch.rpm
+动态内核模块支持的RPM安装包
+kernel_ppp_mppe-0.0.5-2dkms.noarch.rpm
+MPPE加密协议的内核补丁的RPM安装包
+ppp-2.4.3-5.rhel4.i386.rpm
+升级内置PPP到2.4.3版本，以支持MPPE加密协议
+pptpd-1.">
 <meta name="twitter:creator" content="@1">
 
     
@@ -85,14 +100,14 @@ http://download.tortoisegit.org/tgit/1.8.7.0/TortoiseGit-1.8.7.0-32bit.msi">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/08/25/windows搭建git/" title="windows 安装 git 和使用github" itemprop="url">windows 安装 git 和使用github</a>
+      <a href="/2015/05/26/Linux vpn 配置/" title="Linux vpn 配置" itemprop="url">Linux vpn 配置</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Rockyx" target="_blank" itemprop="author">Rockyx</a>
 		
   <p class="article-time">
-    <time datetime="2014-08-24T16:00:00.000Z" itemprop="datePublished"> 发表于 Aug 25 2014</time>
+    <time datetime="2015-05-25T16:00:00.000Z" itemprop="datePublished"> 发表于 May 26 2015</time>
     
   </p>
 </header>
@@ -105,25 +120,45 @@ http://download.tortoisegit.org/tgit/1.8.7.0/TortoiseGit-1.8.7.0-32bit.msi">
 		
 		</div>
 		
-		<p>TortoiseGit下载列表</p>
-<p><a href="http://download.tortoisegit.org/tgit/" target="_blank" rel="external">http://download.tortoisegit.org/tgit/</a></p>
-<p>当前最新版本为1.8.7.0，这里是32位系统安装包：</p>
-<p><a href="http://download.tortoisegit.org/tgit/1.8.7.0/TortoiseGit-1.8.7.0-32bit.msi" target="_blank" rel="external">http://download.tortoisegit.org/tgit/1.8.7.0/TortoiseGit-1.8.7.0-32bit.msi</a><br><a id="more"></a><br>msysgit 下载地址</p>
-<p><a href="http://msysgit.googlecode.com/files/msysGit-fullinstall-1.8.5.2-preview20131230.exe" target="_blank" rel="external">http://msysgit.googlecode.com/files/msysGit-fullinstall-1.8.5.2-preview20131230.exe</a></p>
-<p>安装顺序：首先安装msysgit；然后安装TortoiseGit。</p>
-<p>桌面右键菜单TortoiseGit，打开设置菜单</p>
-<p>设置Git Path</p>
-<p>设置环境变量path增加/Path/To/msysgit/bin和/Path/To/mingw/bin</p>
-<p>这里是C:\msysgit\msysgit\bin和 C:\msysgit\msysgit\mingw\bin，用分号隔开。</p>
-<p>在命令行启动git， 如果出现libiconv-2.dll丢失<br>将C:\msysgit\msysgit\mingw\bin下的libiconv-2.dll复制到C:\msysgit\msysgit\bin</p>
-<p>然后用ssh-keygen生成密钥对<br>ssh-keygen -t rsa -C “falcon_chen@qq.com”</p>
-<p>把私钥id_rsa放在C:\msysgit\msysgit.ssh，不是意想中的windows用户家目录：C:\Users\Administrator.ssh</p>
-<p>把公钥id_rsa.pub 内容复制，并到<a href="https://github.com/settings/ssh里添加" target="_blank" rel="external">https://github.com/settings/ssh里添加</a></p>
-<p>执行:<br>ssh git@github.com 如果成功将显示你的github的用户名</p>
-<p>如果提示权限错误，可以尝试使用-i 参数指定私钥位置再试一下，或者也有可能是复制公钥到github时混入了空格之类</p>
-<p>提示缺少*.dll时 直接从安装目录/mingw/lib中复制msysgit/bin里即可</p>
-<p>克隆github项目Bonfire<br>git clone <a href="https://github.com/falconchen/Bonfire.git" target="_blank" rel="external">https://github.com/falconchen/Bonfire.git</a></p>
-<p>来源：<a href="http://falcon.sinaapp.com/post-34921.html" target="_blank" rel="external">http://falcon.sinaapp.com/post-34921.html</a></p>
+		<p>安装环境：RHEL4 update 1</p>
+<p>###一，下载VPN服务器所需软件</p>
+<p>dkms-2.05-1.noarch.rpm</p>
+<p>动态内核模块支持的RPM安装包</p>
+<p>kernel_ppp_mppe-0.0.5-2dkms.noarch.rpm</p>
+<p>MPPE加密协议的内核补丁的RPM安装包</p>
+<p>ppp-2.4.3-5.rhel4.i386.rpm</p>
+<p>升级内置PPP到2.4.3版本，以支持MPPE加密协议</p>
+<p>pptpd-1.3.0-0.i386.rpm</p>
+<p>pptp点对点隧道协议的RPM安装包</p>
+<p>下载地址：</p>
+<p><a href="http://prdownloads.sourceforge.net/poptop/" target="_blank" rel="external">http://prdownloads.sourceforge.net/poptop/</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh dkms-~&#10;rpm -ivh kernel_ppp_~&#10;rpm -Uvh ppp-2.~&#10;rpm -ivh pptpd-1.3~</span><br></pre></td></tr></table></figure>
+<p>修改/etc/pptpd.conf和/etc/ppp/chap-secrets文件来配置VPN服务器的运行参数</p>
+<p>主配置文件：</p>
+<p>vi /etc/pptpd.conf</p>
+<p>加入以下配置语句：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">localip 192.168.1.115&#10;remoteip 192.168.16.0-192.168.16.254,192.168.1.254&#10;#localip &#26412;&#22320;VPN&#26381;&#21153;&#22120;&#25152;&#20351;&#29992;&#30340;IP&#22320;&#22336;&#65292;&#20379;VPN&#23458;&#25143;&#31471;&#36830;&#25509;&#20351;&#29992;&#12290;&#10;#remoteip &#20998;&#37197;&#32473;VPN&#23458;&#25143;&#26426;&#30340;&#22320;&#22336;&#27573;&#12290;&#21487;&#20197;&#20351;&#29992;&#8220;-&#8221;&#34920;&#31034;&#19968;&#20010;&#27573;&#65292;&#20063;&#21487;&#20197;&#20351;&#29992;&#8220;&#65292;&#8221;&#38548;&#24320;&#19981;&#36830;&#32493;&#30340;&#22320;&#22336;&#12290;</span><br></pre></td></tr></table></figure>
+<p>配置帐号文件：</p>
+<p>vi /etc/ppp/chap-secrets</p>
+<p>该文件保存了VPN客户端拨入时所使用的帐户名，口令，和分配的IP地址，格式为：</p>
+<p>帐户名 服务 口令 分配给该帐户的IP地址</p>
+<p>“test” pptpd “test” “*”<br>“test2” pptpd “test2” “192.168.1.254”</p>
+<p>###打开Linux内核的路由功能</p>
+<p>为了能让VPN客户机与内部网络互联，还应打开Linux内核的路由功能，否则VPN客户端只能访问VPN服务器的内部网卡，所以需打开Linux内核的路由功能。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#34;1&#34;&#62;/proc/sys/net/ipv4/ip_forward</span><br></pre></td></tr></table></figure>
+<p>###启动和停止VPN服务：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#21551;&#21160;&#65306;/etc/init.d/pptpd start&#10;&#20572;&#27490;&#65306;/etc/init.d/pptpd stop&#10;&#37325;&#21551;&#65306;/etc/init.d/pptpd restart&#10;# pptpd restart-kill :&#22312;&#20572;&#27490;VPN&#26381;&#21153;&#26102;&#65292;&#26029;&#24320;&#25152;&#26377;&#30340;&#24050;&#32463;&#23384;&#22312;&#30340;VPN&#36830;&#25509;&#65292;&#28982;&#21518;&#20351;&#29992;&#21629;&#20196;/etc/init.d/pptpd start  &#21551;&#21160;VPN&#26381;&#21153;&#12290;</span><br></pre></td></tr></table></figure>
+<p>###自动启动VPN服务</p>
+<p>ntsysv</p>
+<p>选中pptpd</p>
+<p>防火墙设置：</p>
+<p>说明：pptp服务使用TCP协议的1723端口和编号47的IP协议（GRE常规路由封装）。如果Linux服务器开启<br>了防火墙功能，就需关闭防火墙功能或设置允许TCP协议的1723端口和编号47的IP协议通过，如可以使用以<br>下命令开放TCP协议的1723端口和编号为47的IP协议</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -I INPUT -p tcp --dport 1723 -j ACCEPT&#10;iptables -I INPUT -P gre -j ACCEPT</span><br></pre></td></tr></table></figure>
+<p>参考文章：<br><a href="http://fanqiang.chinaunix.net/app/vpn/2005-04-06/3112.shtml" target="_blank" rel="external">http://fanqiang.chinaunix.net/app/vpn/2005-04-06/3112.shtml</a></p>
+<p>PPTP连接异常断开，VPN服务器上还保留连接</p>
+<p>这种情况多为用户拨入后异常断开如直接拨网线，VPN服务器没有及时检测到中断信号，所以存在一个死连接（有时死连接存在10个小时以上或一直存在）。对于Linux平台的VPN服务器，大部分异常断开后，服务器的pptpctrl程序会中断连接，但有时无法中断，导致死连接的存在。</p>
+<p>ifconfig pppＸ　down把死链中断</p>
+<p>本文出自 “寒.枫_@liguxk” 博客</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -131,13 +166,13 @@ http://download.tortoisegit.org/tgit/1.8.7.0/TortoiseGit-1.8.7.0-32bit.msi">
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/GitHub/">GitHub</a>
+  <a class="article-category-link" href="/categories/Linux/">Linux</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/git/">git</a><a href="/tags/github/">github</a><a href="/tags/windows/">windows</a>
+  <span></span> <a href="/tags/linux/">linux</a><a href="/tags/vpn/">vpn</a>
   </div>
 
 </div>
@@ -146,7 +181,7 @@ http://download.tortoisegit.org/tgit/1.8.7.0/TortoiseGit-1.8.7.0-32bit.msi">
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://xudongrocky.github.io/2014/08/25/windows搭建git/" data-title="windows 安装 git 和使用github | Rocky&#39;blog" data-tsina="514578909" class="share clearfix">
+	  <div data-url="http://xudongrocky.github.io/2015/05/26/Linux vpn 配置/" data-title="Linux vpn 配置 | Rocky&#39;blog" data-tsina="514578909" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -160,18 +195,18 @@ http://download.tortoisegit.org/tgit/1.8.7.0/TortoiseGit-1.8.7.0-32bit.msi">
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2014/08/25/php读取xml/" title="php读取xml的简单示例">
+ <a href="/2015/06/11/MySQL之终端(Terminal)管理MySQL/" title="MySQL之终端(Terminal)管理MySQL">
   <strong>上一篇：</strong><br/>
   <span>
-  php读取xml的简单示例</span>
+  MySQL之终端(Terminal)管理MySQL</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2014/06/10/windows-ftp-bat/"  title="windows下ftp自动更新">
+<a href="/2015/05/20/Z_coding/"  title="Zen Coding基本语法">
  <strong>下一篇：</strong><br/> 
- <span>windows下ftp自动更新
+ <span>Zen Coding基本语法
 </span>
 </a>
 </div>
@@ -180,7 +215,7 @@ http://download.tortoisegit.org/tgit/1.8.7.0/TortoiseGit-1.8.7.0-32bit.msi">
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2014/08/25/windows搭建git/" data-title="windows 安装 git 和使用github" data-url="http://xudongrocky.github.io/2014/08/25/windows搭建git/"></div>
+	<div class="ds-thread" data-thread-key="2015/05/26/Linux vpn 配置/" data-title="Linux vpn 配置" data-url="http://xudongrocky.github.io/2015/05/26/Linux vpn 配置/"></div>
 </section>
 
 

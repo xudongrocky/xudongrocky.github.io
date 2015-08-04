@@ -1,0 +1,626 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>MySQL之终端(Terminal)管理MySQL | Rocky&#39;blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Rockyx">
+    
+
+    
+    <meta name="description" content="###1、MySQL服务状态
+
+1 启动MySQL
+
+1$ sudo /Library/StartupItems/MySQLCOM/MySQLCOM start
+需要输入管理员密码。
+
+2 停止MySQL服务
+
+1$ sudo /Library/StartupItems/MySQLCOM/MySQLCOM stop
+只需把start改成stop即可。
+
+3 重启MySQL服务
+
+1$ sudo /">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL之终端(Terminal)管理MySQL">
+<meta property="og:url" content="http://xudongrocky.github.io/2015/06/11/MySQL之终端(Terminal)管理MySQL/index.html">
+<meta property="og:site_name" content="Rocky'blog">
+<meta property="og:description" content="###1、MySQL服务状态
+
+1 启动MySQL
+
+1$ sudo /Library/StartupItems/MySQLCOM/MySQLCOM start
+需要输入管理员密码。
+
+2 停止MySQL服务
+
+1$ sudo /Library/StartupItems/MySQLCOM/MySQLCOM stop
+只需把start改成stop即可。
+
+3 重启MySQL服务
+
+1$ sudo /">
+<meta property="og:updated_time" content="2015-08-04T03:29:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MySQL之终端(Terminal)管理MySQL">
+<meta name="twitter:description" content="###1、MySQL服务状态
+
+1 启动MySQL
+
+1$ sudo /Library/StartupItems/MySQLCOM/MySQLCOM start
+需要输入管理员密码。
+
+2 停止MySQL服务
+
+1$ sudo /Library/StartupItems/MySQLCOM/MySQLCOM stop
+只需把start改成stop即可。
+
+3 重启MySQL服务
+
+1$ sudo /">
+<meta name="twitter:creator" content="@1">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Rocky&#39;blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Rocky&#39;blog">Rocky&#39;blog</a></h1>
+				<h2 class="blog-motto">救赎，对未来。</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首页|Home</a></li>
+					
+						<li><a href="/archives">归档|Archives</a></li>
+					
+						<li><a href="/about">关于作者|About</a></li>
+					
+					<li>
+ 					
+						<form class="search">
+							<label>Search</label>
+						<input type="text" id="ts-search-input" name="q" size="30" placeholder="搜索"><br>
+						</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/06/11/MySQL之终端(Terminal)管理MySQL/" title="MySQL之终端(Terminal)管理MySQL" itemprop="url">MySQL之终端(Terminal)管理MySQL</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Rockyx" target="_blank" itemprop="author">Rockyx</a>
+		
+  <p class="article-time">
+    <time datetime="2015-06-10T16:00:00.000Z" itemprop="datePublished"> 发表于 Jun 11 2015</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			
+		
+		</div>
+		
+		<p>###1、MySQL服务状态</p>
+<ol>
+<li>1 启动MySQL</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo /Library/StartupItems/MySQLCOM/MySQLCOM start</span><br></pre></td></tr></table></figure>
+<p>需要输入管理员密码。</p>
+<ol>
+<li>2 停止MySQL服务</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo /Library/StartupItems/MySQLCOM/MySQLCOM stop</span><br></pre></td></tr></table></figure>
+<p>只需把start改成stop即可。</p>
+<ol>
+<li>3 重启MySQL服务</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo /Library/StartupItems/MySQLCOM/MySQLCOM restart</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Restarting MySQL database server</span><br></pre></td></tr></table></figure>
+<p>在我的MAC上，一般都只需要用restart的命令。</p>
+<p>当然，除了上述使用终端去启动MySQL外。还有一个意外简单的方法，可以在“设置”里找到MySQL服务，并设置它的状态，开启或关闭。</p>
+<ol>
+<li>4 查看当前MySQL版本</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&#62; select version();+-----------+| version() |+-----------+| 5.6.20    |+-----------+1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<p>###2.更改MySQL的root管理员密码</p>
+<p>例：把root账号的密码改成’123456’：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/mysql/bin/mysqladmin -u root -p password 123456Enter password:</span><br></pre></td></tr></table></figure>
+<p>Warning: Using a password on the command line interface can be insecure.</p>
+<p>注意：需要知道账户的原密码才能进行修改。</p>
+<p>###3、MySQL终端登录</p>
+<ol>
+<li>1 终端登录（繁琐）</li>
+</ol>
+<p>首先使用以下命令查看路径，是否有有添加MySQL的路径：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ echo $PATH</span><br></pre></td></tr></table></figure>
+<p>MySQL的运行路径：/usr/local/mysql/bin，如果你能在查询结果中找到这段字符，那么就是已添加进路径里。如没有，则需要把MySQL的运行路径添加进去。</p>
+<p>添加MySQL运行路径：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ PATH=&#34;$PATH&#34;:/usr/local/mysql/bin</span><br></pre></td></tr></table></figure>
+<p>添加是否成功，我们可以使用which使用来查看：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ which mysql/usr/local/mysql/bin/mysql</span><br></pre></td></tr></table></figure>
+<p>若存在路径，则会输出mysql的运行路径，若不存在，则什么都不输出。</p>
+<p>添加后，我们就能正常登录了：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mysql -u root -p</span><br></pre></td></tr></table></figure>
+<p>这里会要求输入密码，需要注意的是，这里的密码为MySQL的登录密码，非系统管理员的登录密码。</p>
+<p>注意：每次关闭终端后，再重新打开终端，都要重新添加路径，你可以把这些命令当作是临时的。也就是说，这些命令会在终端关闭后失效。 </p>
+<ol>
+<li>2 终端登录（简化）</li>
+</ol>
+<p>我们可以使用alias命令简化MySQL的终端登录操作，当然，如果你只是想要临时的话，你可以直接在终端输入alias &lt;简化后的名字&gt; &lt;执行的命令&gt;，这样做的话，只要你关闭终端后，刚刚进行过简化的命令就会失效。如果你想要让它始终存在，那么需要把alias指令添加到 ~/.bashrc(Ubuntu) 或者~/.bash_profile(MacOS)。</p>
+<p>除了上述3.1的终端登录方法外，我们还可以使用MySQL的运行路径进行登录，像这样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ /usr/local/mysql/bin/mysql -u root -p</span><br></pre></td></tr></table></figure>
+<p>Enter password: </p>
+<p>输入正确的密码后，就能正常操作MySQL了。</p>
+<p>如果每次都要输入这么一长串的字符，那不是太繁琐了点？而且不容易记忆。在终端里，我们可以使用 alias 命令去简化： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ alias mysql=/usr/local/mysql/bin/mysql</span><br></pre></td></tr></table></figure>
+<p>它的格式是：alias &lt;简化后的名字&gt;=&lt;’具体的指令&gt;</p>
+<p>我们使用时就可以很简单：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mysql -u root -p</span><br></pre></td></tr></table></figure>
+<p>Enter password:<br>实在是太方便了。</p>
+<p>但是这样做还不够，因为这个是暂时性的，只要我们关闭当前的终端窗口，所有简化的指令便会失效。所以我们需要把alias定义为全局的，我们可以在~/.bash_profile添加指令，前提是进入~/.bash_profile文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi ~/.bash_profile &#10;``` &#10;&#10;&#10;&#32534;&#36753;&#21069;&#65306;</span><br></pre></td></tr></table></figure>
+<p>export PATH=”/Users/baijiawei/Library/Application Support/GoodSync”:$PATH<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10; &#10;&#10;&#32534;&#36753;&#21518;&#65306;</span><br></pre></td></tr></table></figure></p>
+<p>export PATH=”/Users/baijiawei/Library/Application Support/GoodSync”:$PATH<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;```             &#10;# MySQL&#10;alias mysql=&#39;/usr/local/mysql/bin/mysql&#39;;&#10;#&#37027;&#19968;&#34892;&#20195;&#34920;&#26159;&#27880;&#37322;&#65292;&#25105;&#20204;&#19968;&#33324;&#36824;&#20250;&#22312;&#20855;&#20307;&#30340;&#21629;&#20196;&#21152;&#19978;&#21333;&#24341;&#21495;&#65292;&#23601;&#26159;&#21069;&#38754;&#25105;&#20204;&#25552;&#21450;&#21040;&#30340;&#8220;alias &#60;&#31616;&#21270;&#21518;&#30340;&#21517;&#23383;&#62;=&#60;&#39;&#20855;&#20307;&#30340;&#25351;&#20196;&#62;&#8221;&#12290;</span><br></pre></td></tr></table></figure></p>
+<p>最后，要使~/.bash_profile文件生效，我们必须使用 source 命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ source ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<p>以后我们使用时，就不需要再输入那么多麻烦的指令了，So Easy。</p>
+<p>我们可以在终端上直接输入alias查看已有的简化命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ alias &#10;alias mysql=&#39;/usr/local/mysql/bin/mysql&#39;&#10;``` &#10;&#10; &#10;&#10; &#10;&#10;###4&#12289; MySQL&#25968;&#25454;&#24211;&#30340;&#23548;&#20837;&#21644;&#23548;&#20986;&#10;&#10;&#35201;&#24819;&#23548;&#20837;&#21644;&#23548;&#20986;&#25968;&#25454;&#24211;&#65292;&#25105;&#20204;&#38656;&#35201;&#29992;&#21040;mysqldump&#24037;&#20855;&#65292;&#25509;&#19979;&#26469;&#25105;&#20250;&#20171;&#32461;&#23427;&#30340;&#23548;&#20837;&#21644;&#23548;&#20986;&#21151;&#33021;&#12290;&#36825;&#20010;&#24037;&#20855;&#22312;&#23433;&#35013;MySQL&#26102;&#23601;&#38468;&#24102;&#19978;&#20102;&#65292;&#22312;&#20351;&#29992;&#23427;&#20043;&#21069;&#65292;&#25105;&#20204;&#38656;&#35201;&#25214;&#21040;&#23427;&#30340;&#36816;&#34892;&#36335;&#24452;&#12290;&#24184;&#22909;&#30340;&#26159;&#65292;&#25105;&#24050;&#32463;&#25214;&#21040;&#20102;&#65306;</span><br></pre></td></tr></table></figure>
+<p>/usr/local/mysql/bin/mysqldump<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;&#10;&#25105;&#20204;&#20808;&#19981;&#29992;&#30528;&#24613;&#24590;&#26679;&#21435;&#20351;&#29992;&#23427;&#65292;&#25105;&#20204;&#20808;&#20351;&#29992;alias&#31616;&#21270;&#19968;&#19979;&#21629;&#20196;&#65306;</span><br></pre></td></tr></table></figure></p>
+<p>alias mysqldump=’/usr/local/mysql/bin/mysqldump’;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10; &#10;&#10;4. 1 &#23548;&#20986;&#25968;&#25454;&#24211;&#10;&#10;&#10;&#22909;&#20102;&#65292;&#29616;&#22312;&#25105;&#20204;&#26469;&#20171;&#32461;&#23427;&#30340;&#29992;&#27861;&#21543;&#65292;&#20808;&#26469;&#30475;&#30475;&#23548;&#20986;&#25968;&#25454;&#24211;&#26102;&#30340;&#26684;&#24335;&#65306;</span><br></pre></td></tr></table></figure></p>
+<p>mysqldump -u root -p &lt;数据库名&gt; &lt;表名&gt; &gt; &lt;导出的名字&gt;.sql<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;&#10;&#26469;&#20010;&#23454;&#20363;&#35828;&#26126;&#65306;</span><br></pre></td></tr></table></figure></p>
+<p>$ mysqldump -u root -p test CLASS &gt; class.sql<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;Enter password: &#10;&#10;&#10;&#24403;&#28982;&#36825;&#20123;&#25805;&#20316;&#37117;&#26159;&#38656;&#35201;&#36755;&#20837;MySQL&#30340;&#31649;&#29702;&#21592;&#23494;&#30721;&#65292;&#20063;&#23601;&#26159;root&#30340;&#23494;&#30721;&#12290;&#21478;&#22806;&#65292;&#23427;&#26159;&#23548;&#20986;&#21040;&#32456;&#31471;&#30340;&#24403;&#21069;&#30446;&#24405;&#12290;&#25552;&#31034;&#65306;&#8220;&#25105;&#20204;&#21487;&#20197;&#20351;&#29992;pwd&#26597;&#30475;&#24403;&#21069;&#25152;&#22312;&#30446;&#24405;&#8221;&#12290;&#10;&#10; &#10;&#10;&#23548;&#20986;&#24102;&#21024;&#38500;&#26684;&#24335;&#30340;&#25968;&#25454;&#24211;&#65292;&#36824;&#21407;&#26102;&#33021;&#22815;&#35206;&#30422;&#24050;&#26377;&#25968;&#25454;&#24211;&#32780;&#19981;&#29992;&#21024;&#38500;&#21407;&#26377;&#25968;&#25454;&#24211;&#65306;</span><br></pre></td></tr></table></figure></p>
+<p>mysqldump –add-drop-table e -u root -p testDB &gt; TESTDB.sql<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10; &#10;&#10;4. 2 &#23548;&#20837;&#25968;&#25454;&#24211;&#10; &#10; &#10;&#22312;&#24050;&#26377;&#30340;&#25968;&#25454;&#24211;&#23548;&#20837;&#25968;&#25454;&#65292;&#39318;&#20808;&#20351;&#29992;use&#21629;&#20196;&#36827;&#20837;&#21040;&#35813;&#25968;&#25454;&#24211;&#65292;&#28982;&#21518;&#65306;</span><br></pre></td></tr></table></figure></p>
+<p>mysql&gt; source /Users//Documents/Code/class.sql<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;&#23548;&#20837;&#25968;&#25454;&#24211;&#30340;&#26684;&#24335;&#65306;source /&#60;&#36335;&#24452;&#62;/. &#60;sql&#62;.sql&#65292;&#20320;&#20063;&#21487;&#20197;&#23548;&#20986;&#20026;.dump&#25991;&#20214;&#10;&#10; &#10;&#10;4. 3 &#36824;&#21407;&#25968;&#25454;&#24211;&#10;&#10;&#10;&#22914;&#26524;&#20320;&#35823;&#21024;&#20102;&#19968;&#20123;&#25968;&#25454;&#65292;&#21448;&#25110;&#32773;&#26159;&#26356;&#26032;&#25968;&#25454;&#26102;&#24536;&#35760;&#25351;&#23450;where&#26465;&#20214;&#65292;&#25110;&#32773;&#20320;&#25226;&#25968;&#25454;&#34920;&#37117;&#21024;&#38500;&#20102;&#65292;&#20320;&#20063;&#21487;&#20197;&#25226;&#23427;&#20204;&#36824;&#21407;&#65306;</span><br></pre></td></tr></table></figure></p>
+<p>$ mysql -u root -p testDB &lt; testDB.sql<br>```</p>
+<p>Enter password: </p>
+<p>当然，也是需要输入root密码。</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/MySQL/">MySQL</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/MySQL/">MySQL</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://xudongrocky.github.io/2015/06/11/MySQL之终端(Terminal)管理MySQL/" data-title="MySQL之终端(Terminal)管理MySQL | Rocky&#39;blog" data-tsina="514578909" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/06/27/VMWare ESXi 6.0和vSphere Client的安装及配置/" title="VMWare ESXi 6.0和vSphere Client的安装及配置">
+  <strong>上一篇：</strong><br/>
+  <span>
+  VMWare ESXi 6.0和vSphere Client的安装及配置</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2015/05/26/Linux vpn 配置/"  title="Linux vpn 配置">
+ <strong>下一篇：</strong><br/> 
+ <span>Linux vpn 配置
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2015/06/11/MySQL之终端(Terminal)管理MySQL/" data-title="MySQL之终端(Terminal)管理MySQL" data-url="http://xudongrocky.github.io/2015/06/11/MySQL之终端(Terminal)管理MySQL/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ 
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/GitHub/" title="GitHub">GitHub<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/IT杂谈/" title="IT杂谈">IT杂谈<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Linux/" title="Linux">Linux<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Mac/" title="Mac">Mac<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/MySQL/" title="MySQL">MySQL<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/PHP/" title="PHP">PHP<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/markdown/" title="markdown">markdown<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/前端/" title="前端">前端<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/服务端/" title="服务端">服务端<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/碎碎念/" title="碎碎念">碎碎念<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+  <div class="tagcloudlist">
+    <p class="asidetitle">标签云</p>
+    <div class="tagcloudlist clearfix">
+       <a href="/tags/ESXi/" style="font-size: 10px;">ESXi</a> <a href="/tags/Life/" style="font-size: 10px;">Life</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/RAID5/" style="font-size: 10px;">RAID5</a> <a href="/tags/Z-coding/" style="font-size: 10px;">Z-coding</a> <a href="/tags/ftp/" style="font-size: 10px;">ftp</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 15px;">github</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/php/" style="font-size: 15px;">php</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/wget/" style="font-size: 10px;">wget</a> <a href="/tags/windows/" style="font-size: 20px;">windows</a> <a href="/tags/windows10/" style="font-size: 10px;">windows10</a> <a href="/tags/xml/" style="font-size: 10px;">xml</a> <a href="/tags/zsh/" style="font-size: 10px;">zsh</a> <a href="/tags/服务端/" style="font-size: 10px;">服务端</a> <a href="/tags/网盘技巧/" style="font-size: 10px;">网盘技巧</a>
+    </div>
+  </div>
+
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+ <iframe width="200" height="440" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=200&height=440&fansRow=2&ptype=1&speed=0&skin=5&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=2180032564&verifier=11a31d47&colors=d6f3f7,f9f9f9,7e7e7e,0082cb,41a6cb&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m just a programmer <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/2180032564" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/1" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		<a href="http://stackoverflow.com/users/1" target="_blank" class="icon-stack-overflow" title="stackoverflow"></a>
+		
+		
+		<a href="https://twitter.com/1" target="_blank" class="icon-twitter" title="twitter"></a>
+		
+		
+		<a href="https://www.facebook.com/1" target="_blank" class="icon-facebook" title="facebook"></a>
+		
+		
+		<a href="https://www.linkedin.com/in/1" target="_blank" class="icon-linkedin" title="linkedin"></a>
+		
+		
+		
+		<a href="http://www.zhihu.com/people/1" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:xudongrocky@outlook.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
+		
+		<a href="/about" target="_blank" title="Rockyx">Rockyx</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"xdking"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<script>
+var option = {
+  engineKey: '174bdb44fd2839136d02'
+};
+(function(w,d,t,u,n,s,e){
+  s = d.createElement(t);
+  s.src = u;
+  s.async = 1;
+  w[n] = function(r){
+    w[n].opts = r;
+  };
+  e = d.getElementsByTagName(t)[0];
+  e.parentNode.insertBefore(s, e);
+})(window,document,'script','//tinysou-cdn.b0.upaiyun.com/ts.js','_ts');
+_ts(option);
+</script>
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
