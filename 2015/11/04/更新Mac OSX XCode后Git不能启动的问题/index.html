@@ -4,49 +4,26 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>VMWare ESXi 6.0和vSphere Client的安装及配置 | Rocky&#39;blog</title>
+    <title>更新Mac OSX XCode后Git不能启动的问题 | Rocky&#39;blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Rockyx">
     
 
     
-    <meta name="description" content="服务器机型：DELL T430
-由于公司要求，安装VMWare ESXi6.0 然后安装Windows Server 2008 R2 Sta 以及 Windows Server 2012 R2 Sta 。
-​准备：
-免费VMWare请下载：https://my.vmware.com/cn/web/vmware/evalcenter?p=free-esxi6
-注册帐号，下载VMWare ESXi6.">
+    <meta name="description" content="更新 OSX EI Capition后，首次试用 git 发现问题。如下
+1&amp;#10;Error: &amp;#10;&amp;#10;Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.&amp;#10;&amp;#10;&amp;#10;&amp;#10;    at ChildProcess.&amp;#60;ano">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VMWare ESXi 6.0和vSphere Client的安装及配置">
-<meta property="og:url" content="http://xudongrocky.github.io/2015/06/27/VMWare ESXi 6.0和vSphere Client的安装及配置/index.html">
+<meta property="og:title" content="更新Mac OSX XCode后Git不能启动的问题">
+<meta property="og:url" content="http://xudongrocky.github.io/2015/11/04/更新Mac OSX XCode后Git不能启动的问题/index.html">
 <meta property="og:site_name" content="Rocky'blog">
-<meta property="og:description" content="服务器机型：DELL T430
-由于公司要求，安装VMWare ESXi6.0 然后安装Windows Server 2008 R2 Sta 以及 Windows Server 2012 R2 Sta 。
-​准备：
-免费VMWare请下载：https://my.vmware.com/cn/web/vmware/evalcenter?p=free-esxi6
-注册帐号，下载VMWare ESXi6.">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/81f0a834gw1euqe7hxvs8j20pq0jz78r.jpg">
-<meta property="og:image" content="http://ww3.sinaimg.cn/large/81f0a834gw1euqe7w2ai5j20rq0ku0yt.jpg">
-<meta property="og:image" content="http://ww3.sinaimg.cn/large/81f0a834gw1euqe7w2ai5j20rq0ku0yt.jpg">
-<meta property="og:image" content="http://ww3.sinaimg.cn/large/81f0a834gw1euqe7w2ai5j20rq0ku0yt.jpg">
-<meta property="og:image" content="http://ww4.sinaimg.cn/large/81f0a834gw1euqe8reoi3j20xi0kb41v.jpg">
-<meta property="og:image" content="http://ww2.sinaimg.cn/large/81f0a834gw1euqe91uauij210i0ki4at.jpg">
-<meta property="og:image" content="http://ww2.sinaimg.cn/large/81f0a834gw1euqe91uauij210i0ki4at.jpg">
-<meta property="og:image" content="http://ww2.sinaimg.cn/large/81f0a834gw1euqe91uauij210i0ki4at.jpg">
-<meta property="og:image" content="http://ww4.sinaimg.cn/large/81f0a834gw1euqea144i6j20zi0iun6m.jpg">
-<meta property="og:image" content="http://ww3.sinaimg.cn/large/81f0a834gw1euqea86cnlj210n0j2wni.jpg">
-<meta property="og:image" content="http://ww4.sinaimg.cn/large/81f0a834gw1euqeag0vssj210d0khq7c.jpg">
-<meta property="og:image" content="http://ww4.sinaimg.cn/large/81f0a834gw1euqeag0vssj210d0khq7c.jpg">
-<meta property="og:image" content="http://ww4.sinaimg.cn/large/81f0a834gw1euqeawqjiwj20vq0kjgpr.jpg">
-<meta property="og:image" content="http://ww4.sinaimg.cn/large/81f0a834gw1euqeawqjiwj20vq0kjgpr.jpg">
-<meta property="og:updated_time" content="2015-08-04T03:05:56.000Z">
+<meta property="og:description" content="更新 OSX EI Capition后，首次试用 git 发现问题。如下
+1&amp;#10;Error: &amp;#10;&amp;#10;Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.&amp;#10;&amp;#10;&amp;#10;&amp;#10;    at ChildProcess.&amp;#60;ano">
+<meta property="og:updated_time" content="2015-11-04T12:58:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VMWare ESXi 6.0和vSphere Client的安装及配置">
-<meta name="twitter:description" content="服务器机型：DELL T430
-由于公司要求，安装VMWare ESXi6.0 然后安装Windows Server 2008 R2 Sta 以及 Windows Server 2012 R2 Sta 。
-​准备：
-免费VMWare请下载：https://my.vmware.com/cn/web/vmware/evalcenter?p=free-esxi6
-注册帐号，下载VMWare ESXi6.">
+<meta name="twitter:title" content="更新Mac OSX XCode后Git不能启动的问题">
+<meta name="twitter:description" content="更新 OSX EI Capition后，首次试用 git 发现问题。如下
+1&amp;#10;Error: &amp;#10;&amp;#10;Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.&amp;#10;&amp;#10;&amp;#10;&amp;#10;    at ChildProcess.&amp;#60;ano">
 <meta name="twitter:creator" content="@1">
 
     
@@ -102,14 +79,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/06/27/VMWare ESXi 6.0和vSphere Client的安装及配置/" title="VMWare ESXi 6.0和vSphere Client的安装及配置" itemprop="url">VMWare ESXi 6.0和vSphere Client的安装及配置</a>
+      <a href="/2015/11/04/更新Mac OSX XCode后Git不能启动的问题/" title="更新Mac OSX XCode后Git不能启动的问题" itemprop="url">更新Mac OSX XCode后Git不能启动的问题</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Rockyx" target="_blank" itemprop="author">Rockyx</a>
 		
   <p class="article-time">
-    <time datetime="2015-06-26T16:00:00.000Z" itemprop="datePublished"> 发表于 Jun 27 2015</time>
+    <time datetime="2015-11-03T16:00:00.000Z" itemprop="datePublished"> 发表于 Nov 4 2015</time>
     
   </p>
 </header>
@@ -122,27 +99,12 @@
 		
 		</div>
 		
-		<p>服务器机型：DELL T430</p>
-<p>由于公司要求，安装VMWare ESXi6.0 然后安装Windows Server 2008 R2 Sta 以及 Windows Server 2012 R2 Sta 。</p>
-<p>​准备：</p>
-<p>免费VMWare请下载：<a href="https://my.vmware.com/cn/web/vmware/evalcenter?p=free-esxi6" target="_blank" rel="external">https://my.vmware.com/cn/web/vmware/evalcenter?p=free-esxi6</a></p>
-<p>注册帐号，下载VMWare ESXi6.0 镜像文件。写入U盘或者光盘（需要刻录机RW）。</p>
-<p>ok,开机F10进入BIOS，设置U盘启动。</p>
-<p><img src="http://ww1.sinaimg.cn/large/81f0a834gw1euqe7hxvs8j20pq0jz78r.jpg" alt="rocky"></p>
-<p><img src="http://ww3.sinaimg.cn/large/81f0a834gw1euqe7w2ai5j20rq0ku0yt.jpg" alt="rocky"></p>
-<p><img src="http://ww3.sinaimg.cn/large/81f0a834gw1euqe7w2ai5j20rq0ku0yt.jpg" alt="rocky"></p>
-<p><img src="http://ww3.sinaimg.cn/large/81f0a834gw1euqe7w2ai5j20rq0ku0yt.jpg" alt="rocky"></p>
-<p><img src="http://ww4.sinaimg.cn/large/81f0a834gw1euqe8reoi3j20xi0kb41v.jpg" alt="rocky"></p>
-<p><img src="http://ww2.sinaimg.cn/large/81f0a834gw1euqe91uauij210i0ki4at.jpg" alt="rocky"></p>
-<p><img src="http://ww2.sinaimg.cn/large/81f0a834gw1euqe91uauij210i0ki4at.jpg" alt="rocky"></p>
-<p><img src="http://ww2.sinaimg.cn/large/81f0a834gw1euqe91uauij210i0ki4at.jpg" alt="rocky"></p>
-<p><img src="http://ww4.sinaimg.cn/large/81f0a834gw1euqea144i6j20zi0iun6m.jpg" alt="rocky"></p>
-<p><img src="http://ww3.sinaimg.cn/large/81f0a834gw1euqea86cnlj210n0j2wni.jpg" alt="rocky"></p>
-<p><img src="http://ww4.sinaimg.cn/large/81f0a834gw1euqeag0vssj210d0khq7c.jpg" alt="rocky"></p>
-<p><img src="http://ww4.sinaimg.cn/large/81f0a834gw1euqeag0vssj210d0khq7c.jpg" alt="rocky"></p>
-<p><img src="http://ww4.sinaimg.cn/large/81f0a834gw1euqeawqjiwj20vq0kjgpr.jpg" alt="rocky"></p>
-<p><img src="http://ww4.sinaimg.cn/large/81f0a834gw1euqeawqjiwj20vq0kjgpr.jpg" alt="rocky"></p>
-<p>至此结束。</p>
+		<p>更新 OSX EI Capition后，首次试用 git 发现问题。如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;Error: &#10;&#10;Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.&#10;&#10;&#10;&#10;    at ChildProcess.&#60;anonymous&#62; (/Users/xudong/Development/hexo_blog/node_modules/hexo-deployer-git/node_modules/hexo-util/lib/spawn.js:42:17)&#10;    at ChildProcess.emit (events.js:110:17)&#10;    at maybeClose (child_process.js:1015:16)&#10;    at Socket.&#60;anonymous&#62; (child_process.js:1183:11)&#10;    at Socket.emit (events.js:107:17)&#10;    at Pipe.close (net.js:485:12)</span><br></pre></td></tr></table></figure>
+<p>解决方法：</p>
+<p>打开你可爱的小终端，然后输入如下代码执行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;sudo xcodebuild -license</span><br></pre></td></tr></table></figure>
+<p>然后同意条款。搞定！</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -150,13 +112,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/服务端/">服务端</a>
+  <a class="article-category-link" href="/categories/Mac/">Mac</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/ESXi/">ESXi</a>
+  <span></span> <a href="/tags/git/">git</a><a href="/tags/hexo/">hexo</a><a href="/tags/mac/">mac</a>
   </div>
 
 </div>
@@ -165,7 +127,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://xudongrocky.github.io/2015/06/27/VMWare ESXi 6.0和vSphere Client的安装及配置/" data-title="VMWare ESXi 6.0和vSphere Client的安装及配置 | Rocky&#39;blog" data-tsina="514578909" class="share clearfix">
+	  <div data-url="http://xudongrocky.github.io/2015/11/04/更新Mac OSX XCode后Git不能启动的问题/" data-title="更新Mac OSX XCode后Git不能启动的问题 | Rocky&#39;blog" data-tsina="514578909" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -178,19 +140,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/07/30/Windows10/" title="Windows 10正式版镜像+激活方法">
-  <strong>上一篇：</strong><br/>
-  <span>
-  Windows 10正式版镜像+激活方法</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2015/06/27/RAID5,HS配置/"  title="RAID5,HS配置">
+<a href="/2015/08/20/Mac 制作u盘启动盘/"  title="Mac 制作u盘启动盘">
  <strong>下一篇：</strong><br/> 
- <span>RAID5,HS配置
+ <span>Mac 制作u盘启动盘
 </span>
 </a>
 </div>
@@ -199,7 +153,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/06/27/VMWare ESXi 6.0和vSphere Client的安装及配置/" data-title="VMWare ESXi 6.0和vSphere Client的安装及配置" data-url="http://xudongrocky.github.io/2015/06/27/VMWare ESXi 6.0和vSphere Client的安装及配置/"></div>
+	<div class="ds-thread" data-thread-key="2015/11/04/更新Mac OSX XCode后Git不能启动的问题/" data-title="更新Mac OSX XCode后Git不能启动的问题" data-url="http://xudongrocky.github.io/2015/11/04/更新Mac OSX XCode后Git不能启动的问题/"></div>
 </section>
 
 
