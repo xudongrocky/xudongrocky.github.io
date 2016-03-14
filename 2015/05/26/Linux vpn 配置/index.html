@@ -54,7 +54,7 @@ pptpd-1.3.0-">
     <link rel="apple-touch-icon" href="/img/jacman.jpg">
     <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
     
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
   <body>
@@ -128,25 +128,25 @@ pptpd-1.3.0-">
 <p>pptp点对点隧道协议的RPM安装包</p>
 <p>下载地址：</p>
 <p><a href="http://prdownloads.sourceforge.net/poptop/" target="_blank" rel="external">http://prdownloads.sourceforge.net/poptop/</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh dkms-~&#10;rpm -ivh kernel_ppp_~&#10;rpm -Uvh ppp-2.~&#10;rpm -ivh pptpd-1.3~</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh dkms-~</span><br><span class="line">rpm -ivh kernel_ppp_~</span><br><span class="line">rpm -Uvh ppp-2.~</span><br><span class="line">rpm -ivh pptpd-1.3~</span><br></pre></td></tr></table></figure>
 <p>修改/etc/pptpd.conf和/etc/ppp/chap-secrets文件来配置VPN服务器的运行参数</p>
 <p>主配置文件：</p>
 <p>vi /etc/pptpd.conf</p>
 <p>加入以下配置语句：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">localip 192.168.1.115&#10;remoteip 192.168.16.0-192.168.16.254,192.168.1.254&#10;#localip &#26412;&#22320;VPN&#26381;&#21153;&#22120;&#25152;&#20351;&#29992;&#30340;IP&#22320;&#22336;&#65292;&#20379;VPN&#23458;&#25143;&#31471;&#36830;&#25509;&#20351;&#29992;&#12290;&#10;#remoteip &#20998;&#37197;&#32473;VPN&#23458;&#25143;&#26426;&#30340;&#22320;&#22336;&#27573;&#12290;&#21487;&#20197;&#20351;&#29992;&#8220;-&#8221;&#34920;&#31034;&#19968;&#20010;&#27573;&#65292;&#20063;&#21487;&#20197;&#20351;&#29992;&#8220;&#65292;&#8221;&#38548;&#24320;&#19981;&#36830;&#32493;&#30340;&#22320;&#22336;&#12290;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">localip 192.168.1.115</span><br><span class="line">remoteip 192.168.16.0-192.168.16.254,192.168.1.254</span><br><span class="line">#localip 本地VPN服务器所使用的IP地址，供VPN客户端连接使用。</span><br><span class="line">#remoteip 分配给VPN客户机的地址段。可以使用“-”表示一个段，也可以使用“，”隔开不连续的地址。</span><br></pre></td></tr></table></figure>
 <p>配置帐号文件：</p>
 <p>vi /etc/ppp/chap-secrets</p>
 <p>该文件保存了VPN客户端拨入时所使用的帐户名，口令，和分配的IP地址，格式为：</p>
 <p>帐户名 服务 口令 分配给该帐户的IP地址</p>
 <p>“test” pptpd “test” “*”<br>“test2” pptpd “test2” “192.168.1.254”</p>
 <h3 id="打开Linux内核的路由功能">打开Linux内核的路由功能</h3><p>为了能让VPN客户机与内部网络互联，还应打开Linux内核的路由功能，否则VPN客户端只能访问VPN服务器的内部网卡，所以需打开Linux内核的路由功能。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#34;1&#34;&#62;/proc/sys/net/ipv4/ip_forward</span><br></pre></td></tr></table></figure>
-<h3 id="启动和停止VPN服务：">启动和停止VPN服务：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#21551;&#21160;&#65306;/etc/init.d/pptpd start&#10;&#20572;&#27490;&#65306;/etc/init.d/pptpd stop&#10;&#37325;&#21551;&#65306;/etc/init.d/pptpd restart&#10;# pptpd restart-kill :&#22312;&#20572;&#27490;VPN&#26381;&#21153;&#26102;&#65292;&#26029;&#24320;&#25152;&#26377;&#30340;&#24050;&#32463;&#23384;&#22312;&#30340;VPN&#36830;&#25509;&#65292;&#28982;&#21518;&#20351;&#29992;&#21629;&#20196;/etc/init.d/pptpd start  &#21551;&#21160;VPN&#26381;&#21153;&#12290;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;1&quot;&gt;/proc/sys/net/ipv4/ip_forward</span><br></pre></td></tr></table></figure>
+<h3 id="启动和停止VPN服务：">启动和停止VPN服务：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">启动：/etc/init.d/pptpd start</span><br><span class="line">停止：/etc/init.d/pptpd stop</span><br><span class="line">重启：/etc/init.d/pptpd restart</span><br><span class="line"># pptpd restart-kill :在停止VPN服务时，断开所有的已经存在的VPN连接，然后使用命令/etc/init.d/pptpd start  启动VPN服务。</span><br></pre></td></tr></table></figure>
 <h3 id="自动启动VPN服务">自动启动VPN服务</h3><p>ntsysv</p>
 <p>选中pptpd</p>
 <p>防火墙设置：</p>
 <p>说明：pptp服务使用TCP协议的1723端口和编号47的IP协议（GRE常规路由封装）。如果Linux服务器开启<br>了防火墙功能，就需关闭防火墙功能或设置允许TCP协议的1723端口和编号47的IP协议通过，如可以使用以<br>下命令开放TCP协议的1723端口和编号为47的IP协议</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -I INPUT -p tcp --dport 1723 -j ACCEPT&#10;iptables -I INPUT -P gre -j ACCEPT</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">iptables -I INPUT -p tcp --dport 1723 -j ACCEPT</span><br><span class="line">iptables -I INPUT -P gre -j ACCEPT</span><br></pre></td></tr></table></figure>
 <p>参考文章：<br><a href="http://fanqiang.chinaunix.net/app/vpn/2005-04-06/3112.shtml" target="_blank" rel="external">http://fanqiang.chinaunix.net/app/vpn/2005-04-06/3112.shtml</a></p>
 <p>PPTP连接异常断开，VPN服务器上还保留连接</p>
 <p>这种情况多为用户拨入后异常断开如直接拨网线，VPN服务器没有及时检测到中断信号，所以存在一个死连接（有时死连接存在10个小时以上或一直存在）。对于Linux平台的VPN服务器，大部分异常断开后，服务器的pptpctrl程序会中断连接，但有时无法中断，导致死连接的存在。</p>
@@ -232,6 +232,10 @@ pptpd-1.3.0-">
 		<ul>
 		
 		  
+			<li><a href="/categories/FileZilla/" title="FileZilla">FileZilla<sup>1</sup></a></li>
+		  
+		
+		  
 			<li><a href="/categories/GitHub/" title="GitHub">GitHub<sup>1</sup></a></li>
 		  
 		
@@ -279,7 +283,7 @@ pptpd-1.3.0-">
   <div class="tagcloudlist">
     <p class="asidetitle">标签云</p>
     <div class="tagcloudlist clearfix">
-       <a href="/tags/ESXi/" style="font-size: 10px;">ESXi</a> <a href="/tags/Homebrew/" style="font-size: 10px;">Homebrew</a> <a href="/tags/Life/" style="font-size: 10px;">Life</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/RAID5/" style="font-size: 10px;">RAID5</a> <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/Z-coding/" style="font-size: 10px;">Z-coding</a> <a href="/tags/ftp/" style="font-size: 10px;">ftp</a> <a href="/tags/git/" style="font-size: 13.33px;">git</a> <a href="/tags/github/" style="font-size: 13.33px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/php/" style="font-size: 13.33px;">php</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/wget/" style="font-size: 10px;">wget</a> <a href="/tags/windows/" style="font-size: 16.67px;">windows</a> <a href="/tags/windows10/" style="font-size: 10px;">windows10</a> <a href="/tags/xml/" style="font-size: 10px;">xml</a> <a href="/tags/zsh/" style="font-size: 10px;">zsh</a> <a href="/tags/服务端/" style="font-size: 10px;">服务端</a> <a href="/tags/网盘技巧/" style="font-size: 10px;">网盘技巧</a>
+       <a href="/tags/ESXi/" style="font-size: 10px;">ESXi</a> <a href="/tags/FileZilla/" style="font-size: 10px;">FileZilla</a> <a href="/tags/Homebrew/" style="font-size: 10px;">Homebrew</a> <a href="/tags/Life/" style="font-size: 10px;">Life</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/RAID5/" style="font-size: 10px;">RAID5</a> <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/Z-coding/" style="font-size: 10px;">Z-coding</a> <a href="/tags/ftp/" style="font-size: 10px;">ftp</a> <a href="/tags/git/" style="font-size: 13.33px;">git</a> <a href="/tags/github/" style="font-size: 13.33px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/php/" style="font-size: 13.33px;">php</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/wget/" style="font-size: 10px;">wget</a> <a href="/tags/windows/" style="font-size: 16.67px;">windows</a> <a href="/tags/windows10/" style="font-size: 10px;">windows10</a> <a href="/tags/xml/" style="font-size: 10px;">xml</a> <a href="/tags/zsh/" style="font-size: 10px;">zsh</a> <a href="/tags/服务端/" style="font-size: 10px;">服务端</a> <a href="/tags/网盘技巧/" style="font-size: 10px;">网盘技巧</a>
     </div>
   </div>
 

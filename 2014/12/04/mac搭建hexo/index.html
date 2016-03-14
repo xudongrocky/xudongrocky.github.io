@@ -12,30 +12,30 @@
 
     
     <meta name="description" content="​1.安装homebrew，一句话搞定
-1uby -e &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;#34;
+1uby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;
 2.安装nodejs，一句话搞定
 1brew install node
 3.安装hexo
-1npm install -g hexo&amp;#10;&amp;#10;hexo in">
+12345npm install -g hexohexo initnp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mac下搭建hexo并且git">
 <meta property="og:url" content="http://xudongrocky.github.io/2014/12/04/mac搭建hexo/index.html">
 <meta property="og:site_name" content="Rocky'blog">
 <meta property="og:description" content="​1.安装homebrew，一句话搞定
-1uby -e &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;#34;
+1uby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;
 2.安装nodejs，一句话搞定
 1brew install node
 3.安装hexo
-1npm install -g hexo&amp;#10;&amp;#10;hexo in">
+12345npm install -g hexohexo initnp">
 <meta property="og:updated_time" content="2014-12-06T10:54:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mac下搭建hexo并且git">
 <meta name="twitter:description" content="​1.安装homebrew，一句话搞定
-1uby -e &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;#34;
+1uby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;
 2.安装nodejs，一句话搞定
 1brew install node
 3.安装hexo
-1npm install -g hexo&amp;#10;&amp;#10;hexo in">
+12345npm install -g hexohexo initnp">
 <meta name="twitter:creator" content="@1">
 
     
@@ -48,7 +48,7 @@
     <link rel="apple-touch-icon" href="/img/jacman.jpg">
     <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
     
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
   <body>
@@ -112,25 +112,25 @@
 		</div>
 		
 		<p>​1.安装homebrew，一句话搞定</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uby -e &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&#34;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br></pre></td></tr></table></figure>
 <p>2.安装nodejs，一句话搞定</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure>
 <p>3.安装hexo</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo&#10;&#10;hexo init&#10;&#10;npm install</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br><span class="line"></span><br><span class="line">hexo init</span><br><span class="line"></span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
 <p>4.安装git</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure>
 <p>5.配置<br>5.1检查SSH key</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh</span><br></pre></td></tr></table></figure>
 <p>5.2备份已有的key（如果没有，看下一步）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir key_backup&#10;mv id_rsa* key_backup</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir key_backup</span><br><span class="line">mv id_rsa* key_backup</span><br></pre></td></tr></table></figure>
 <p>5.3 生成SSHkey</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &#34;123@qq.com&#8221;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;123@qq.com”</span><br></pre></td></tr></table></figure>
 <p>5.4将SSHkey添加到github</p>
 <pre><code>登陆到github页面，account Settings-&gt;SSH Public Keys-&gt;Add another <span class="variable">key</span>将生成的<span class="variable">key</span>（id_rsa.pub文件）内容<span class="built_in">copy</span>到输入框中。<span class="built_in">save</span>.
 </code></pre><p>5.5测试连接</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure>
 <p>5.6设置个人信息</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo Rockyx$ git config --global user.email 123@qq.com&#10;hexo Rockyx$ git config --global user.name &#34;xxxx&#34;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo Rockyx$ git config --global user.email 123@qq.com</span><br><span class="line">hexo Rockyx$ git config --global user.name &quot;xxxx&quot;</span><br></pre></td></tr></table></figure>
 <p>5.7修改_config.yml文件。</p>
   
 	</div>
@@ -145,7 +145,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/github/">github</a><a href="/tags/mac/">mac</a>
+  <span></span> <a href="/tags/mac/">mac</a><a href="/tags/github/">github</a>
   </div>
 
 </div>
@@ -177,9 +177,9 @@
 
 
 <div class="next">
-<a href="/2014/08/25/php_calendar/"  title="php万年历的实现代码示例">
+<a href="/2014/08/25/windows搭建git/"  title="windows 安装 git 和使用github">
  <strong>下一篇：</strong><br/> 
- <span>php万年历的实现代码示例
+ <span>windows 安装 git 和使用github
 </span>
 </a>
 </div>
@@ -210,6 +210,10 @@
 <div class="categorieslist">
 	<p class="asidetitle">分类</p>
 		<ul>
+		
+		  
+			<li><a href="/categories/FileZilla/" title="FileZilla">FileZilla<sup>1</sup></a></li>
+		  
 		
 		  
 			<li><a href="/categories/GitHub/" title="GitHub">GitHub<sup>1</sup></a></li>
@@ -259,7 +263,7 @@
   <div class="tagcloudlist">
     <p class="asidetitle">标签云</p>
     <div class="tagcloudlist clearfix">
-       <a href="/tags/ESXi/" style="font-size: 10px;">ESXi</a> <a href="/tags/Homebrew/" style="font-size: 10px;">Homebrew</a> <a href="/tags/Life/" style="font-size: 10px;">Life</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/RAID5/" style="font-size: 10px;">RAID5</a> <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/Z-coding/" style="font-size: 10px;">Z-coding</a> <a href="/tags/ftp/" style="font-size: 10px;">ftp</a> <a href="/tags/git/" style="font-size: 13.33px;">git</a> <a href="/tags/github/" style="font-size: 13.33px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/php/" style="font-size: 13.33px;">php</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/wget/" style="font-size: 10px;">wget</a> <a href="/tags/windows/" style="font-size: 16.67px;">windows</a> <a href="/tags/windows10/" style="font-size: 10px;">windows10</a> <a href="/tags/xml/" style="font-size: 10px;">xml</a> <a href="/tags/zsh/" style="font-size: 10px;">zsh</a> <a href="/tags/服务端/" style="font-size: 10px;">服务端</a> <a href="/tags/网盘技巧/" style="font-size: 10px;">网盘技巧</a>
+       <a href="/tags/ESXi/" style="font-size: 10px;">ESXi</a> <a href="/tags/FileZilla/" style="font-size: 10px;">FileZilla</a> <a href="/tags/Homebrew/" style="font-size: 10px;">Homebrew</a> <a href="/tags/Life/" style="font-size: 10px;">Life</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/RAID5/" style="font-size: 10px;">RAID5</a> <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/Z-coding/" style="font-size: 10px;">Z-coding</a> <a href="/tags/ftp/" style="font-size: 10px;">ftp</a> <a href="/tags/git/" style="font-size: 13.33px;">git</a> <a href="/tags/github/" style="font-size: 13.33px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/php/" style="font-size: 13.33px;">php</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/wget/" style="font-size: 10px;">wget</a> <a href="/tags/windows/" style="font-size: 16.67px;">windows</a> <a href="/tags/windows10/" style="font-size: 10px;">windows10</a> <a href="/tags/xml/" style="font-size: 10px;">xml</a> <a href="/tags/zsh/" style="font-size: 10px;">zsh</a> <a href="/tags/服务端/" style="font-size: 10px;">服务端</a> <a href="/tags/网盘技巧/" style="font-size: 10px;">网盘技巧</a>
     </div>
   </div>
 
