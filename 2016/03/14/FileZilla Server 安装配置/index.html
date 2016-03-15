@@ -19,11 +19,26 @@ FileZil">
 <meta property="og:site_name" content="Rocky'blog">
 <meta property="og:description" content="FileZilla 是经典的开源免费FTP解决方案，它包括FileZilla Client（客户端）和FileZilla Server（服务器端）。其中 FileZilla Server 小巧、易用，功能比起商业软件FTP Serv-U 毫不逊色。目前FileZilla Server 只提供了windows 系统下的版本，本文主要讲述的是FileZilla Server 安装配置。
 FileZil">
-<meta property="og:updated_time" content="2016-03-14T09:21:10.000Z">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/81f0a834gw1f1xejzanqqj20dz0aqdh4.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/81f0a834gw1f1xizwd0cuj20dz0aq0tr.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/81f0a834gw1f1xj0leu38j20dz0aqq3s.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/81f0a834gw1f1xj173l8wj20dz0aq3z8.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/81f0a834gw1f1xj1vzvsqj20dz0aqjrz.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/81f0a834gw1f1xj2g2er1j207205hjrh.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/81f0a834gw1f1xj2xyc1pj20dv09wwfa.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/81f0a834gw1f1xj3o0c0pj20gl0b9gng.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/81f0a834gw1f1xj46wbycj20gl0b9jt1.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/81f0a834gw1f1xj4n1149j20gl0b9ac5.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/81f0a834gw1f1xj51w0xuj20gl0b9wgh.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/81f0a834gw1f1xj5iiatvj20i30bzgmp.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/81f0a834gw1f1xjc8se0bj20i30bz75n.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/81f0a834gw1f1xjdh1z8ij20i30bz0u4.jpg">
+<meta property="og:updated_time" content="2016-03-15T06:38:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FileZilla Server 安装配置">
 <meta name="twitter:description" content="FileZilla 是经典的开源免费FTP解决方案，它包括FileZilla Client（客户端）和FileZilla Server（服务器端）。其中 FileZilla Server 小巧、易用，功能比起商业软件FTP Serv-U 毫不逊色。目前FileZilla Server 只提供了windows 系统下的版本，本文主要讲述的是FileZilla Server 安装配置。
 FileZil">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/81f0a834gw1f1xejzanqqj20dz0aqdh4.jpg">
 <meta name="twitter:creator" content="@1">
 
     
@@ -95,7 +110,7 @@ FileZil">
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#FileZilla_Server_安装"><span class="toc-number">1.</span> <span class="toc-text">FileZilla Server 安装</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#FileZilla_Server_安装"><span class="toc-number">1.</span> <span class="toc-text">FileZilla Server 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FileZilla_Server_配置"><span class="toc-number">2.</span> <span class="toc-text">FileZilla Server 配置</span></a></li></ol>
 		
 		</div>
 		
@@ -103,6 +118,51 @@ FileZil">
 <h3 id="FileZilla_Server_安装">FileZilla Server 安装</h3><p>去官方下载最新的FileZilla Server 安装包。官方地址：<a href="http://filezilla-project.org/。" target="_blank" rel="external">http://filezilla-project.org/。</a></p>
 <p>本文以 FileZilla Server 0.9.40 版本为例。</p>
 <p>下载后双击安装包，出现许可协议界面。</p>
+<p><img src="http://ww1.sinaimg.cn/large/81f0a834gw1f1xejzanqqj20dz0aqdh4.jpg" alt=""></p>
+<p>点击 “I Agree”。</p>
+<p><img src="http://ww3.sinaimg.cn/large/81f0a834gw1f1xizwd0cuj20dz0aq0tr.jpg" alt=""></p>
+<p>选择安装方式，默认的标准即可。其中“Source Code”源代码一般不用安装，除非是想研究FileZilla的源代码。 点击“Next”继续。</p>
+<p><img src="http://ww3.sinaimg.cn/large/81f0a834gw1f1xj0leu38j20dz0aqq3s.jpg" alt=""></p>
+<p>选择安装路径，我们这里安装到默认目录，你完全可以安装到其它路径，以增加安全系数。点击 “Next” 继续。</p>
+<p><img src="http://ww1.sinaimg.cn/large/81f0a834gw1f1xj173l8wj20dz0aq3z8.jpg" alt=""></p>
+<p>设置启动方式。我们可以通过下拉列表对FileZilla Server的启动方式进行选择，即：<br>1、将FileZilla Server作为服务安装，并随Windows系统启动。<br>2、将FileZilla Server作为服务安装，但手动启动。<br>3、不将FileZilla Server作为服务安装，自动启动。<br>默认选择是第一项，可以根据个人的不同需要，自行选择。<br>下边的14147是管理端口，建议修改此端口，例如改成30281端口。（注意不要和常见服务如80端口冲突）。</p>
+<p><img src="http://ww2.sinaimg.cn/large/81f0a834gw1f1xj1vzvsqj20dz0aqjrz.jpg" alt=""></p>
+<p>设置FileZilla Server Interface（FileZilla控制台）的启动方式，同样有三个选项，即：<br>1、所有用户适用，用户登录即启动。<br>2、仅对当前用户适用，登录即启动。<br>3、手动执行。<br>可以根据个人使用的需要进行选择。点击“Install”开始安装。</p>
+<p>安装完成后，安装程序自动启动FileZilla 控制台。</p>
+<p><img src="http://ww4.sinaimg.cn/large/81f0a834gw1f1xj2g2er1j207205hjrh.jpg" alt=""></p>
+<p>上图所示的是FileZilla 控制台登录界面，默认情况下，是连接本机的，也可以输入IP地址，直接对远程的FTP Server进行管理，需要注意的是，这里的端口号就是安装FileZilla Server时所设置的用于管理的连接端口号。管理员密码项，默认情况下是不需要的，通过FileZilla 控制台设置了管理员密码后这个选项才会生效，必须输入正确的密码才能使用。建议选中 “Always connect to this server” 的选项，即表示每次启动管理控制台，都是管理本机的Filezilla服务。点击“OK” 进入控制台。如图。</p>
+<p><img src="http://ww2.sinaimg.cn/large/81f0a834gw1f1xj2xyc1pj20dv09wwfa.jpg" alt=""></p>
+<p>上图为FileZilla 控制台，在工具栏中几乎包含了菜单中的全部功能，从左至右分别是：“连接/断开”、“锁定”、“设置”、“用户设置”、“群组设置”、“关于”、“按逻辑名称显示”、“按物理名称显示”和“排列方式”。 简单说明一下，“连接/断开”即控制FileZilla Server Interface程序与FTP Server端的连接情况; “锁定”即将Server端锁定，不再允许任何新的连接; “设置”即综合设置; “用户设置” 和 “群组设置” 即为Server端设置登录使用的用户名以及将多个用户进行分组; “关于”就不用解释了吧; “按逻辑名称显示”和“按物理名称显示”从字面上理解就是Server端文件的显示方式，是显示逻辑的名字，还是物理的名字; “排列方式”也没必要多说吧。</p>
+<h3 id="FileZilla_Server_配置">FileZilla Server 配置</h3><p>让我们对FileZilla Server进行一下设置，来实现我们的要求。点击菜单-&gt;Edit-&gt;Setttings 如图</p>
+<p><img src="http://ww1.sinaimg.cn/large/81f0a834gw1f1xj3o0c0pj20gl0b9gng.jpg" alt=""></p>
+<p>这里我们可以设置FTP Server端的最基本的情况，如端口号、最大用户数、以及连接超时的设置。</p>
+<p><img src="http://ww3.sinaimg.cn/large/81f0a834gw1f1xj46wbycj20gl0b9jt1.jpg" alt=""></p>
+<p>这里可以设置连接FTP Server时所显示的欢迎信息，可以任意修改，当然，也可以设置不显示。</p>
+<p><img src="http://ww3.sinaimg.cn/large/81f0a834gw1f1xj4n1149j20gl0b9ac5.jpg" alt=""></p>
+<p>Filezilla默认的模式是Port模式，不是Passive被动模式。为了解决防火墙后的客户端连接问题，最好是启用Passive模式。进入被动模式设置。选中启动被动模式端口范围的选项，输入10000~10050端口范围，表示被动模式将要使用这个范围的端口。接下来在防火墙上允许10000~10050端口范围进出，或者直接允许Filezilla server.exe主程序的互联网访问。</p>
+<p><img src="http://ww1.sinaimg.cn/large/81f0a834gw1f1xj51w0xuj20gl0b9wgh.jpg" alt=""></p>
+<p>这里可以设置Server端接受FileZilla Server Interface程序管理的情况，如使用的端口号、是否需要密码、以及可以进行管理连接和不能进行管理连接的IP范围。</p>
+<p>最后点击左侧的OK按钮，保存配置。</p>
+<p>下面我们来添加一个FTP用户。点击菜单-&gt;Edit-&gt;Users  进入用户设置界面：</p>
+<p><img src="http://ww3.sinaimg.cn/large/81f0a834gw1f1xj5iiatvj20i30bzgmp.jpg" alt=""></p>
+<p>点击右侧的 Add 按钮，添加新用户。在新增用户的对话框中，输入“test”这个名字，选中Password前边的多选框，输入密码 123456。即创建了一个名为“ test”的FTP用户。名字密码你可以任意填写。接着点击左侧的“Shared folders”菜单，如图。</p>
+<p><img src="http://ww2.sinaimg.cn/large/81f0a834gw1f1xjc8se0bj20i30bz75n.jpg" alt=""></p>
+<p>点击Add按钮，添加一个目录到test用户。目录前的“H” 表示为FTP Server的主目录。 添加完成，再右侧选择test用户对这个目录的权限。</p>
+<p>设置好主目录之后，再点击“Add”按钮可以把其它目录依次设置进来。不过这里得注意，如果仅仅把别的目录添加进去，那么你用客户端连接之后，会发现除了主目录外，别的目录都看不见。这是怎么回事？这里要说明一个概念——虚拟路径。所谓虚拟路径，就是在客户端看到的目录结构。由于一个用户只能有一个主目录，别的目录如果不映射成虚拟目录的话，客户端将看不到它。所以只有把除了主目录之外的其它目录，虚拟成主目录的子目录，这样在客户端才能看到。如图：</p>
+<p><img src="http://ww2.sinaimg.cn/large/81f0a834gw1f1xjdh1z8ij20i30bz0u4.jpg" alt=""></p>
+<p>本例主目录是D:\MyWeb，如果不做虚拟路径设置，那么客户端登录进来只能看到主目录里面的内容，还有一个D:\Book目录下面的东西看不到。如何设置虚拟路径？鼠标右键点击列表中的“D:\Book”目录，在弹出的菜单里面选“Edit aliases”编辑别名；现在要把D:\Book目录作为客户端主目录下的Book目录，那么就在弹出的窗口里面输入别名 /book ，注意一定用“ /”符号开头，表示是根目录下的虚拟目录。并点击“OK”按钮确定。这样设置之后，在客户端就可以看到一个Book目录，这个目录其实就是D:\Book目录。</p>
+<p>最后点击左侧的OK按钮，保存配置。至此，FileZilla Server的基本设置就完成并可以运行了。</p>
+<p>提示：如果要添加很多FTP账户，那么最好还是设置一下用户组，点击菜单-&gt;Edit-&gt;Groups 来设置，点击右边的“Add”按钮创建新组。组创建完成以后，点“Shared folders”进入目录权限设置页面。以后再添加用户时候，只要从“Group membership”栏选择该用户所属的组即可。组设置是为了便于用户归类管理，相同权限的用户归属到同一个组里面，这样就不用重复多次设置每个用户的权限等参数，简化配置和管理工作。</p>
+<p>加固Filezilla安全</p>
+<ol>
+<li>安装Filezilla到非标准目录</li>
+<li>安装过程中设置Filezilla的管理端口监听在127.0.0.1上的随机端口，例如30281等奇怪的没用的端口。</li>
+<li>安装过程中设置Filezilla的管理密码，并设置密码足够复杂</li>
+<li>在Filezilla目录下的xml配置文件上，设置Guests组禁止读取的权限</li>
+<li>修改FTP登录后的提示信息为IIS、Serv-U等信息</li>
+<li>不要开启SSL加密、SFTP等功能，避免以后出现漏洞</li>
+</ol>
+<p>经过如上一些配置，Filezilla可以做到很高的安全性。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -161,7 +221,7 @@ FileZil">
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#FileZilla_Server_安装"><span class="toc-number">1.</span> <span class="toc-text">FileZilla Server 安装</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#FileZilla_Server_安装"><span class="toc-number">1.</span> <span class="toc-text">FileZilla Server 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FileZilla_Server_配置"><span class="toc-number">2.</span> <span class="toc-text">FileZilla Server 配置</span></a></li></ol>
  
   </div>
 
